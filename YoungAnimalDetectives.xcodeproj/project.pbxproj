@@ -57,6 +57,16 @@
 		ACFCB9051ADF99D50041E7D5 /* EthogramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9031ADF99D50041E7D5 /* EthogramManager.swift */; };
 		ACFCB9071ADFA25B0041E7D5 /* BiolifeDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9061ADFA25B0041E7D5 /* BiolifeDateFormatter.swift */; };
 		ACFCB9091ADFA3270041E7D5 /* NSDate+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9081ADFA3270041E7D5 /* NSDate+Encoding.swift */; };
+		ACFCB9161ADFA9330041E7D5 /* BLTBehaviourStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB90C1ADFA9330041E7D5 /* BLTBehaviourStateProtocol.swift */; };
+		ACFCB9171ADFA9330041E7D5 /* BLTEthogramProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB90D1ADFA9330041E7D5 /* BLTEthogramProtocol.swift */; };
+		ACFCB9181ADFA9330041E7D5 /* BLTIndividualProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB90E1ADFA9330041E7D5 /* BLTIndividualProtocol.swift */; };
+		ACFCB9191ADFA9330041E7D5 /* BLTLocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB90F1ADFA9330041E7D5 /* BLTLocationProtocol.swift */; };
+		ACFCB91A1ADFA9330041E7D5 /* BLTObservationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9101ADFA9330041E7D5 /* BLTObservationProtocol.swift */; };
+		ACFCB91B1ADFA9330041E7D5 /* BLTPhotoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9111ADFA9330041E7D5 /* BLTPhotoProtocol.swift */; };
+		ACFCB91C1ADFA9330041E7D5 /* BLTProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9121ADFA9330041E7D5 /* BLTProjectProtocol.swift */; };
+		ACFCB91D1ADFA9330041E7D5 /* BLTSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9131ADFA9330041E7D5 /* BLTSessionProtocol.swift */; };
+		ACFCB91E1ADFA9330041E7D5 /* BLTTagProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9141ADFA9330041E7D5 /* BLTTagProtocol.swift */; };
+		ACFCB91F1ADFA9330041E7D5 /* BLTWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB9151ADFA9330041E7D5 /* BLTWeatherProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +134,16 @@
 		ACFCB9031ADF99D50041E7D5 /* EthogramManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthogramManager.swift; sourceTree = "<group>"; };
 		ACFCB9061ADFA25B0041E7D5 /* BiolifeDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiolifeDateFormatter.swift; sourceTree = "<group>"; };
 		ACFCB9081ADFA3270041E7D5 /* NSDate+Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Encoding.swift"; sourceTree = "<group>"; };
+		ACFCB90C1ADFA9330041E7D5 /* BLTBehaviourStateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTBehaviourStateProtocol.swift; sourceTree = "<group>"; };
+		ACFCB90D1ADFA9330041E7D5 /* BLTEthogramProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTEthogramProtocol.swift; sourceTree = "<group>"; };
+		ACFCB90E1ADFA9330041E7D5 /* BLTIndividualProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTIndividualProtocol.swift; sourceTree = "<group>"; };
+		ACFCB90F1ADFA9330041E7D5 /* BLTLocationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTLocationProtocol.swift; sourceTree = "<group>"; };
+		ACFCB9101ADFA9330041E7D5 /* BLTObservationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTObservationProtocol.swift; sourceTree = "<group>"; };
+		ACFCB9111ADFA9330041E7D5 /* BLTPhotoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTPhotoProtocol.swift; sourceTree = "<group>"; };
+		ACFCB9121ADFA9330041E7D5 /* BLTProjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTProjectProtocol.swift; sourceTree = "<group>"; };
+		ACFCB9131ADFA9330041E7D5 /* BLTSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTSessionProtocol.swift; sourceTree = "<group>"; };
+		ACFCB9141ADFA9330041E7D5 /* BLTTagProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTTagProtocol.swift; sourceTree = "<group>"; };
+		ACFCB9151ADFA9330041E7D5 /* BLTWeatherProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTWeatherProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +266,7 @@
 		ACFCB8DF1ADF910A0041E7D5 /* BLTModelLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				ACFCB90B1ADFA9050041E7D5 /* BLTProtocols */,
 				ACFCB9011ADF99BF0041E7D5 /* BLTManagers */,
 				ACFCB8F81ADF92B30041E7D5 /* BLTDataModels */,
 			);
@@ -282,6 +303,23 @@
 				ACFCB9031ADF99D50041E7D5 /* EthogramManager.swift */,
 			);
 			name = BLTManagers;
+			sourceTree = "<group>";
+		};
+		ACFCB90B1ADFA9050041E7D5 /* BLTProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB90C1ADFA9330041E7D5 /* BLTBehaviourStateProtocol.swift */,
+				ACFCB90D1ADFA9330041E7D5 /* BLTEthogramProtocol.swift */,
+				ACFCB90E1ADFA9330041E7D5 /* BLTIndividualProtocol.swift */,
+				ACFCB90F1ADFA9330041E7D5 /* BLTLocationProtocol.swift */,
+				ACFCB9101ADFA9330041E7D5 /* BLTObservationProtocol.swift */,
+				ACFCB9111ADFA9330041E7D5 /* BLTPhotoProtocol.swift */,
+				ACFCB9121ADFA9330041E7D5 /* BLTProjectProtocol.swift */,
+				ACFCB9131ADFA9330041E7D5 /* BLTSessionProtocol.swift */,
+				ACFCB9141ADFA9330041E7D5 /* BLTTagProtocol.swift */,
+				ACFCB9151ADFA9330041E7D5 /* BLTWeatherProtocol.swift */,
+			);
+			name = BLTProtocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +446,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFCB8F61ADF92780041E7D5 /* Tag.swift in Sources */,
+				ACFCB91F1ADFA9330041E7D5 /* BLTWeatherProtocol.swift in Sources */,
+				ACFCB9181ADFA9330041E7D5 /* BLTIndividualProtocol.swift in Sources */,
 				ACFCB88B1ADE59550041E7D5 /* MainViewController.swift in Sources */,
 				ACFCB8AC1ADE5BBD0041E7D5 /* ProjectDisplayViewController.swift in Sources */,
 				ACFCB8F01ADF92780041E7D5 /* Ethogram.swift in Sources */,
@@ -418,18 +458,26 @@
 				ACFCB8F41ADF92780041E7D5 /* Location.swift in Sources */,
 				ACFCB8F31ADF92780041E7D5 /* Individual.swift in Sources */,
 				ACFCB8F71ADF92780041E7D5 /* Photo.swift in Sources */,
+				ACFCB91D1ADFA9330041E7D5 /* BLTSessionProtocol.swift in Sources */,
+				ACFCB91C1ADFA9330041E7D5 /* BLTProjectProtocol.swift in Sources */,
 				ACFCB9071ADFA25B0041E7D5 /* BiolifeDateFormatter.swift in Sources */,
+				ACFCB9161ADFA9330041E7D5 /* BLTBehaviourStateProtocol.swift in Sources */,
 				ACFCB8AA1ADE5B960041E7D5 /* ProjectsListViewController.swift in Sources */,
+				ACFCB91B1ADFA9330041E7D5 /* BLTPhotoProtocol.swift in Sources */,
 				ACFCB8EE1ADF92780041E7D5 /* Storable.swift in Sources */,
 				ACFCB8F11ADF92780041E7D5 /* Session.swift in Sources */,
+				ACFCB9191ADFA9330041E7D5 /* BLTLocationProtocol.swift in Sources */,
 				ACFCB9001ADF99340041E7D5 /* BiolifeModel.swift in Sources */,
+				ACFCB91A1ADFA9330041E7D5 /* BLTObservationProtocol.swift in Sources */,
 				ACFCB9091ADFA3270041E7D5 /* NSDate+Encoding.swift in Sources */,
 				ACFCB8FC1ADF95500041E7D5 /* User.swift in Sources */,
 				ACFCB8EF1ADF92780041E7D5 /* BehaviourState.swift in Sources */,
+				ACFCB9171ADFA9330041E7D5 /* BLTEthogramProtocol.swift in Sources */,
 				ACFCB9041ADF99D50041E7D5 /* ProjectManager.swift in Sources */,
 				ACFCB8ED1ADF92780041E7D5 /* Project.swift in Sources */,
 				ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */,
 				ACFCB9051ADF99D50041E7D5 /* EthogramManager.swift in Sources */,
+				ACFCB91E1ADFA9330041E7D5 /* BLTTagProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
