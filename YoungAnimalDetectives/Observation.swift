@@ -107,8 +107,6 @@ func ==(lhs: Observation, rhs: Observation) -> Bool {
 }
 
 
-
-
 extension Observation: NSCoding {
     override func encodeWithCoder(aCoder: NSCoder) {
         super.encodeWithCoder(aCoder)

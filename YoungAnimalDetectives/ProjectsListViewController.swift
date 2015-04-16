@@ -20,5 +20,26 @@ class ProjectsListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Constants.Segue.DOG {
+            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
+                destinationVC.projectName = Constants.Project.DOG
+            }
+        } else if segue.identifier == Constants.Segue.CAT {
+            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
+                destinationVC.projectName = Constants.Project.CAT
+            }
+        } else if segue.identifier == Constants.Segue.GUINEAPIG {
+            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
+                destinationVC.projectName = Constants.Project.GUINEAPIG
+            }
+        } else if segue.identifier == Constants.Segue.RABBIT {
+            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
+                destinationVC.projectName = Constants.Project.RABBIT
+            }
+        }
+    }
+
+    
     
 }

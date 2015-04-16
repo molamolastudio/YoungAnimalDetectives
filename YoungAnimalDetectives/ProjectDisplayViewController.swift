@@ -9,10 +9,36 @@
 import UIKit
 
 class ProjectDisplayViewController: UIViewController {
+    var projectName: String?
+    
+    @IBOutlet weak var animalProfileImage: UIImageView!
+    @IBOutlet weak var projectEthogramImage: UIView!
+    
+    @IBOutlet weak var nicknameField: UITextField!
+    @IBOutlet weak var typeField: UITextField!
+    
+    @IBOutlet weak var individualNickname: UITextView!
+    @IBOutlet weak var individualType: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let project = projectName {
+            switch (project) {
+            case Constants.Project.DOG:
+                animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_DOG)
+            case Constants.Project.CAT:
+                animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_CAT)
+            case Constants.Project.GUINEAPIG:
+                animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_GUINEAPIG)
+            case Constants.Project.RABBIT:
+                animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_RABBIT)
+            default:
+                break
+            }
+        }
+        animalProfileImage.reloadInputViews()
     }
     
     override func didReceiveMemoryWarning() {

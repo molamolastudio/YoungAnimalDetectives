@@ -82,7 +82,7 @@
         <!--ProjectsListViewController-->
         <scene sceneID="IKY-a4-NaN">
             <objects>
-                <viewController providesPresentationContextTransitionStyle="YES" id="D6M-Ez-xMQ" userLabel="ProjectsListViewController" customClass="ProjectDisplayViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController providesPresentationContextTransitionStyle="YES" id="D6M-Ez-xMQ" userLabel="ProjectsListViewController" customClass="ProjectsListViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X8h-05-0UK"/>
                         <viewControllerLayoutGuide type="bottom" id="TQ5-zl-ETh"/>
@@ -142,7 +142,7 @@
                                     <rect key="frame" x="406" y="220" width="320" height="320"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="YXa-gV-97x" kind="show" id="mFa-eD-dhC"/>
+                                    <segue destination="YXa-gV-97x" kind="show" identifier="segue_cat" id="mFa-eD-dhC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMe-4o-IVJ" userLabel="RabbitProject">
@@ -154,7 +154,7 @@
                                     <rect key="frame" x="386" y="610" width="320" height="320"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="YXa-gV-97x" kind="show" id="5ia-ZM-tvP"/>
+                                    <segue destination="YXa-gV-97x" kind="show" identifier="segue_rabbit" id="5ia-ZM-tvP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-KE-2pI" userLabel="Home">
@@ -178,10 +178,10 @@
                                     <rect key="frame" x="32" y="546" width="320" height="320"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="YXa-gV-97x" kind="show" id="MHn-cD-Yte"/>
+                                    <segue destination="YXa-gV-97x" kind="show" identifier="segue_guineapig" id="MHn-cD-Yte"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Choose an animal to investigate:" translatesAutoresizingMaskIntoConstraints="NO" id="Zva-7V-2kS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Choose an animal to investigate:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zva-7V-2kS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="55"/>
@@ -199,7 +199,7 @@
                                     <rect key="frame" x="50" y="165" width="320" height="320"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="YXa-gV-97x" kind="show" id="K7v-Ti-WJk"/>
+                                    <segue destination="YXa-gV-97x" kind="show" identifier="segue_dog" id="K7v-Ti-WJk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -263,18 +263,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="0ba-F4-XbW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-C9-TxE" userLabel="ObservationsButton">
-                                <rect key="frame" x="514" y="545" width="46" height="30"/>
-                                <state key="normal" image="notepadbutton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="602" y="847" width="150" height="150"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="kuA-u6-sdr" kind="show" id="cd6-GK-YOG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsb-XP-DQT" userLabel="Back">
                                 <rect key="frame" x="16" y="15" width="35" height="30"/>
                                 <state key="normal" image="back.png">
@@ -293,7 +281,7 @@
                                     <rect key="frame" x="60" y="164" width="320" height="320"/>
                                 </variation>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Title: Investigate a day in the life of a ____________" translatesAutoresizingMaskIntoConstraints="NO" id="fyu-uG-exL" userLabel="ProjectTitle">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Title: Investigate a day in the life of a ____________" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyu-uG-exL" userLabel="ProjectTitle">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
@@ -302,13 +290,22 @@
                                     <rect key="frame" x="124" y="28" width="511" height="128"/>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nickname:" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-Kl-QjS" userLabel="Nickname">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-Kl-QjS" userLabel="Nickname">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="448" y="164" width="240" height="53"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-Qj-a9u" userLabel="IndividualNickname">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="448" y="213" width="240" height="53"/>
                                 </variation>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efm-6o-Qgr" userLabel="NicknameField">
@@ -319,7 +316,7 @@
                                     <rect key="frame" x="448" y="225" width="235" height="30"/>
                                 </variation>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type:" translatesAutoresizingMaskIntoConstraints="NO" id="89u-7U-SsP" userLabel="Type">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Type:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89u-7U-SsP" userLabel="Type">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
@@ -336,22 +333,44 @@
                                     <rect key="frame" x="448" y="379" width="235" height="30"/>
                                 </variation>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Yz-1v-oDF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7E-m6-OXj" userLabel="EthogramView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-C9-TxE" userLabel="ObservationsButton">
+                                        <rect key="frame" x="514" y="545" width="46" height="30"/>
+                                        <state key="normal" image="notepadbutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="503" y="318" width="150" height="150"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="kuA-u6-sdr" kind="show" id="cd6-GK-YOG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k5V-PU-nf2">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k5V-PU-nf2" id="hrd-Cm-aUZ">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="54" y="510" width="660" height="466"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="kIi-C9-TxE"/>
+                                    </mask>
                                 </variation>
-                            </tableView>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="60" y="504" width="653" height="468"/>
+                                    <mask key="subviews">
+                                        <include reference="kIi-C9-TxE"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-vB-CID" userLabel="IndividualType">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="448" y="367" width="240" height="53"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -361,10 +380,12 @@
                                 <exclude reference="ALk-YA-coP"/>
                                 <exclude reference="fyu-uG-exL"/>
                                 <exclude reference="Jnb-Kl-QjS"/>
+                                <exclude reference="Sla-Qj-a9u"/>
                                 <exclude reference="efm-6o-Qgr"/>
                                 <exclude reference="89u-7U-SsP"/>
                                 <exclude reference="NgN-Mw-xmD"/>
-                                <exclude reference="2Yz-1v-oDF"/>
+                                <exclude reference="s7E-m6-OXj"/>
+                                <exclude reference="yXZ-vB-CID"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -374,15 +395,25 @@
                                 <include reference="ALk-YA-coP"/>
                                 <include reference="fyu-uG-exL"/>
                                 <include reference="Jnb-Kl-QjS"/>
+                                <include reference="Sla-Qj-a9u"/>
                                 <include reference="efm-6o-Qgr"/>
                                 <include reference="89u-7U-SsP"/>
                                 <include reference="NgN-Mw-xmD"/>
-                                <include reference="2Yz-1v-oDF"/>
+                                <include reference="s7E-m6-OXj"/>
+                                <include reference="yXZ-vB-CID"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="animalProfileImage" destination="ALk-YA-coP" id="ie2-r8-GXQ"/>
+                        <outlet property="individualNickname" destination="Sla-Qj-a9u" id="Kii-rM-H54"/>
+                        <outlet property="individualType" destination="yXZ-vB-CID" id="gpz-Ax-Pob"/>
+                        <outlet property="nicknameField" destination="efm-6o-Qgr" id="MMQ-hs-e6K"/>
+                        <outlet property="projectEthogramImage" destination="s7E-m6-OXj" id="mdN-Re-zxu"/>
+                        <outlet property="typeField" destination="NgN-Mw-xmD" id="Pdh-I3-mAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-XM-whw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -493,8 +524,8 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZCe-KI-rfU"/>
-        <segue reference="GJK-Kd-qPR"/>
+        <segue reference="K7v-Ti-WJk"/>
         <segue reference="x7r-XW-f4M"/>
+        <segue reference="4Up-wU-osm"/>
     </inferredMetricsTieBreakers>
 </document>
