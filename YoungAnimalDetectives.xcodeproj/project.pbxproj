@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB479DA1AE07F1B00F61C53 /* circlecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D61AE07F1B00F61C53 /* circlecat.png */; };
+		ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D71AE07F1B00F61C53 /* circlepig.png */; };
+		ACB479DC1AE07F1B00F61C53 /* circlepup.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D81AE07F1B00F61C53 /* circlepup.png */; };
+		ACB479DD1AE07F1B00F61C53 /* circlerabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D91AE07F1B00F61C53 /* circlerabbit.png */; };
 		ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */; };
 		ACFCB88B1ADE59550041E7D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB88A1ADE59550041E7D5 /* MainViewController.swift */; };
 		ACFCB88E1ADE59550041E7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB88C1ADE59550041E7D5 /* Main.storyboard */; };
@@ -30,10 +34,6 @@
 		ACFCB8C71ADF35370041E7D5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8C61ADF35370041E7D5 /* home.png */; };
 		ACFCB8C91ADF6EA90041E7D5 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8C81ADF6EA90041E7D5 /* forward.png */; };
 		ACFCB8D41ADF6EB10041E7D5 /* addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8CA1ADF6EB10041E7D5 /* addbutton.png */; };
-		ACFCB8D51ADF6EB10041E7D5 /* circlecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8CB1ADF6EB10041E7D5 /* circlecat.png */; };
-		ACFCB8D61ADF6EB10041E7D5 /* circlepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8CC1ADF6EB10041E7D5 /* circlepig.png */; };
-		ACFCB8D71ADF6EB10041E7D5 /* circlepup.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8CD1ADF6EB10041E7D5 /* circlepup.png */; };
-		ACFCB8D81ADF6EB10041E7D5 /* circlerabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8CE1ADF6EB10041E7D5 /* circlerabbit.png */; };
 		ACFCB8D91ADF6EB10041E7D5 /* notepadbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8CF1ADF6EB10041E7D5 /* notepadbutton.png */; };
 		ACFCB8DA1ADF6EB10041E7D5 /* squarecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8D01ADF6EB10041E7D5 /* squarecat.png */; };
 		ACFCB8DB1ADF6EB10041E7D5 /* squarepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8D11ADF6EB10041E7D5 /* squarepig.png */; };
@@ -81,6 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ACB479D61AE07F1B00F61C53 /* circlecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlecat.png; sourceTree = "<group>"; };
+		ACB479D71AE07F1B00F61C53 /* circlepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepig.png; sourceTree = "<group>"; };
+		ACB479D81AE07F1B00F61C53 /* circlepup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepup.png; sourceTree = "<group>"; };
+		ACB479D91AE07F1B00F61C53 /* circlerabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlerabbit.png; sourceTree = "<group>"; };
 		ACFCB8831ADE59550041E7D5 /* YoungAnimalDetectives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoungAnimalDetectives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCB8871ADE59550041E7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,10 +112,6 @@
 		ACFCB8C61ADF35370041E7D5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		ACFCB8C81ADF6EA90041E7D5 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 		ACFCB8CA1ADF6EB10041E7D5 /* addbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addbutton.png; sourceTree = "<group>"; };
-		ACFCB8CB1ADF6EB10041E7D5 /* circlecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlecat.png; sourceTree = "<group>"; };
-		ACFCB8CC1ADF6EB10041E7D5 /* circlepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepig.png; sourceTree = "<group>"; };
-		ACFCB8CD1ADF6EB10041E7D5 /* circlepup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepup.png; sourceTree = "<group>"; };
-		ACFCB8CE1ADF6EB10041E7D5 /* circlerabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlerabbit.png; sourceTree = "<group>"; };
 		ACFCB8CF1ADF6EB10041E7D5 /* notepadbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notepadbutton.png; sourceTree = "<group>"; };
 		ACFCB8D01ADF6EB10041E7D5 /* squarecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squarecat.png; sourceTree = "<group>"; };
 		ACFCB8D11ADF6EB10041E7D5 /* squarepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squarepig.png; sourceTree = "<group>"; };
@@ -247,14 +247,14 @@
 				ACFCB8B51ADF2E920041E7D5 /* dog.png */,
 				ACFCB8B61ADF2E920041E7D5 /* pig.png */,
 				ACFCB8CA1ADF6EB10041E7D5 /* addbutton.png */,
-				ACFCB8CB1ADF6EB10041E7D5 /* circlecat.png */,
-				ACFCB8CC1ADF6EB10041E7D5 /* circlepig.png */,
-				ACFCB8CD1ADF6EB10041E7D5 /* circlepup.png */,
-				ACFCB8CE1ADF6EB10041E7D5 /* circlerabbit.png */,
 				ACFCB8CF1ADF6EB10041E7D5 /* notepadbutton.png */,
 				ACFCB8D01ADF6EB10041E7D5 /* squarecat.png */,
 				ACFCB8D11ADF6EB10041E7D5 /* squarepig.png */,
 				ACFCB8D21ADF6EB10041E7D5 /* squarepup.png */,
+				ACB479D61AE07F1B00F61C53 /* circlecat.png */,
+				ACB479D71AE07F1B00F61C53 /* circlepig.png */,
+				ACB479D81AE07F1B00F61C53 /* circlepup.png */,
+				ACB479D91AE07F1B00F61C53 /* circlerabbit.png */,
 				ACFCB8D31ADF6EB10041E7D5 /* squarerabbit.png */,
 				ACFCB8B71ADF2E920041E7D5 /* rabbit.png */,
 				ACFCB8C61ADF35370041E7D5 /* home.png */,
@@ -406,30 +406,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFCB8BB1ADF2E920041E7D5 /* cat.png in Resources */,
+				ACB479DA1AE07F1B00F61C53 /* circlecat.png in Resources */,
 				ACFCB8DB1ADF6EB10041E7D5 /* squarepig.png in Resources */,
 				ACFCB8B11ADF2E7E0041E7D5 /* back.png in Resources */,
 				ACFCB88E1ADE59550041E7D5 /* Main.storyboard in Resources */,
 				ACFCB8C91ADF6EA90041E7D5 /* forward.png in Resources */,
 				ACFCB8DC1ADF6EB10041E7D5 /* squarepup.png in Resources */,
 				ACFCB8BF1ADF2E920041E7D5 /* pig.png in Resources */,
-				ACFCB8D81ADF6EB10041E7D5 /* circlerabbit.png in Resources */,
 				ACFCB8D41ADF6EB10041E7D5 /* addbutton.png in Resources */,
 				ACFCB8D91ADF6EB10041E7D5 /* notepadbutton.png in Resources */,
+				ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */,
 				ACFCB8BC1ADF2E920041E7D5 /* clipboardbg.png in Resources */,
-				ACFCB8D71ADF6EB10041E7D5 /* circlepup.png in Resources */,
+				ACB479DC1AE07F1B00F61C53 /* circlepup.png in Resources */,
 				ACFCB8C01ADF2E920041E7D5 /* rabbit.png in Resources */,
 				ACFCB8BE1ADF2E920041E7D5 /* dog.png in Resources */,
 				ACFCB8DA1ADF6EB10041E7D5 /* squarecat.png in Resources */,
 				ACFCB8C51ADF322F0041E7D5 /* young.png in Resources */,
-				ACFCB8D51ADF6EB10041E7D5 /* circlecat.png in Resources */,
 				ACFCB8931ADE59550041E7D5 /* LaunchScreen.xib in Resources */,
 				ACFCB8BD1ADF2E920041E7D5 /* background.png in Resources */,
 				ACFCB8C31ADF2E920041E7D5 /* animal-orange.png in Resources */,
 				ACFCB8C71ADF35370041E7D5 /* home.png in Resources */,
 				ACFCB8C11ADF2E920041E7D5 /* detectives.png in Resources */,
 				ACFCB8DD1ADF6EB10041E7D5 /* squarerabbit.png in Resources */,
+				ACB479DD1AE07F1B00F61C53 /* circlerabbit.png in Resources */,
 				ACFCB8C21ADF2E920041E7D5 /* animal-blue.png in Resources */,
-				ACFCB8D61ADF6EB10041E7D5 /* circlepig.png in Resources */,
 				ACFCB8901ADE59550041E7D5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
