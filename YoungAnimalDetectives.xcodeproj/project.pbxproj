@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */; };
+		ACFCB88B1ADE59550041E7D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB88A1ADE59550041E7D5 /* MainViewController.swift */; };
+		ACFCB88E1ADE59550041E7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB88C1ADE59550041E7D5 /* Main.storyboard */; };
+		ACFCB8901ADE59550041E7D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB88F1ADE59550041E7D5 /* Images.xcassets */; };
+		ACFCB8931ADE59550041E7D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8911ADE59550041E7D5 /* LaunchScreen.xib */; };
+		ACFCB89F1ADE59550041E7D5 /* YoungAnimalDetectivesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB89E1ADE59550041E7D5 /* YoungAnimalDetectivesTests.swift */; };
+		ACFCB8AA1ADE5B960041E7D5 /* ProjectsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8A91ADE5B960041E7D5 /* ProjectsListViewController.swift */; };
+		ACFCB8AC1ADE5BBD0041E7D5 /* ProjectDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8AB1ADE5BBD0041E7D5 /* ProjectDisplayViewController.swift */; };
+		ACFCB8AE1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8AD1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift */; };
+		ACFCB8B11ADF2E7E0041E7D5 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B01ADF2E7E0041E7D5 /* back.png */; };
+		ACFCB8BB1ADF2E920041E7D5 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B21ADF2E920041E7D5 /* cat.png */; };
+		ACFCB8BC1ADF2E920041E7D5 /* clipboard52-791x1077.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B31ADF2E920041E7D5 /* clipboard52-791x1077.png */; };
+		ACFCB8BD1ADF2E920041E7D5 /* darkblue_background_grid_1024_768.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B41ADF2E920041E7D5 /* darkblue_background_grid_1024_768.png */; };
+		ACFCB8BE1ADF2E920041E7D5 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B51ADF2E920041E7D5 /* dog.png */; };
+		ACFCB8BF1ADF2E920041E7D5 /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B61ADF2E920041E7D5 /* pig.png */; };
+		ACFCB8C01ADF2E920041E7D5 /* rabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B71ADF2E920041E7D5 /* rabbit.png */; };
+		ACFCB8C11ADF2E920041E7D5 /* textEffect (1).png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B81ADF2E920041E7D5 /* textEffect (1).png */; };
+		ACFCB8C21ADF2E920041E7D5 /* textEffect (2).png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8B91ADF2E920041E7D5 /* textEffect (2).png */; };
+		ACFCB8C31ADF2E920041E7D5 /* textEffect (3).png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8BA1ADF2E920041E7D5 /* textEffect (3).png */; };
+		ACFCB8C51ADF322F0041E7D5 /* textEffect.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8C41ADF322F0041E7D5 /* textEffect.png */; };
+		ACFCB8C71ADF35370041E7D5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB8C61ADF35370041E7D5 /* home.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACFCB8991ADE59550041E7D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACFCB87B1ADE59550041E7D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACFCB8821ADE59550041E7D5;
+			remoteInfo = YoungAnimalDetectives;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACFCB8831ADE59550041E7D5 /* YoungAnimalDetectives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoungAnimalDetectives.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFCB8871ADE59550041E7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACFCB88A1ADE59550041E7D5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ACFCB88D1ADE59550041E7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACFCB88F1ADE59550041E7D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ACFCB8921ADE59550041E7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ACFCB8981ADE59550041E7D5 /* YoungAnimalDetectivesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoungAnimalDetectivesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFCB89D1ADE59550041E7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFCB89E1ADE59550041E7D5 /* YoungAnimalDetectivesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoungAnimalDetectivesTests.swift; sourceTree = "<group>"; };
+		ACFCB8A91ADE5B960041E7D5 /* ProjectsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsListViewController.swift; sourceTree = "<group>"; };
+		ACFCB8AB1ADE5BBD0041E7D5 /* ProjectDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDisplayViewController.swift; sourceTree = "<group>"; };
+		ACFCB8AD1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationsNotepadViewController.swift; sourceTree = "<group>"; };
+		ACFCB8B01ADF2E7E0041E7D5 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		ACFCB8B21ADF2E920041E7D5 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		ACFCB8B31ADF2E920041E7D5 /* clipboard52-791x1077.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard52-791x1077.png"; sourceTree = "<group>"; };
+		ACFCB8B41ADF2E920041E7D5 /* darkblue_background_grid_1024_768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkblue_background_grid_1024_768.png; sourceTree = "<group>"; };
+		ACFCB8B51ADF2E920041E7D5 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		ACFCB8B61ADF2E920041E7D5 /* pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pig.png; sourceTree = "<group>"; };
+		ACFCB8B71ADF2E920041E7D5 /* rabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rabbit.png; sourceTree = "<group>"; };
+		ACFCB8B81ADF2E920041E7D5 /* textEffect (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textEffect (1).png"; sourceTree = "<group>"; };
+		ACFCB8B91ADF2E920041E7D5 /* textEffect (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textEffect (2).png"; sourceTree = "<group>"; };
+		ACFCB8BA1ADF2E920041E7D5 /* textEffect (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textEffect (3).png"; sourceTree = "<group>"; };
+		ACFCB8C41ADF322F0041E7D5 /* textEffect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textEffect.png; sourceTree = "<group>"; };
+		ACFCB8C61ADF35370041E7D5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACFCB8801ADE59550041E7D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFCB8951ADE59550041E7D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACFCB87A1ADE59550041E7D5 = {
+			isa = PBXGroup;
+			children = (
+				ACFCB8851ADE59550041E7D5 /* YoungAnimalDetectives */,
+				ACFCB89B1ADE59550041E7D5 /* YoungAnimalDetectivesTests */,
+				ACFCB8841ADE59550041E7D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACFCB8841ADE59550041E7D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB8831ADE59550041E7D5 /* YoungAnimalDetectives.app */,
+				ACFCB8981ADE59550041E7D5 /* YoungAnimalDetectivesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACFCB8851ADE59550041E7D5 /* YoungAnimalDetectives */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB8AF1ADF2DD70041E7D5 /* Images */,
+				ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */,
+				ACFCB88C1ADE59550041E7D5 /* Main.storyboard */,
+				ACFCB8A81ADE5B3F0041E7D5 /* View Controllers */,
+				ACFCB88F1ADE59550041E7D5 /* Images.xcassets */,
+				ACFCB8911ADE59550041E7D5 /* LaunchScreen.xib */,
+				ACFCB8861ADE59550041E7D5 /* Supporting Files */,
+			);
+			path = YoungAnimalDetectives;
+			sourceTree = "<group>";
+		};
+		ACFCB8861ADE59550041E7D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB8871ADE59550041E7D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACFCB89B1ADE59550041E7D5 /* YoungAnimalDetectivesTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB89E1ADE59550041E7D5 /* YoungAnimalDetectivesTests.swift */,
+				ACFCB89C1ADE59550041E7D5 /* Supporting Files */,
+			);
+			path = YoungAnimalDetectivesTests;
+			sourceTree = "<group>";
+		};
+		ACFCB89C1ADE59550041E7D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB89D1ADE59550041E7D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACFCB8A81ADE5B3F0041E7D5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB88A1ADE59550041E7D5 /* MainViewController.swift */,
+				ACFCB8A91ADE5B960041E7D5 /* ProjectsListViewController.swift */,
+				ACFCB8AB1ADE5BBD0041E7D5 /* ProjectDisplayViewController.swift */,
+				ACFCB8AD1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		ACFCB8AF1ADF2DD70041E7D5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB8B21ADF2E920041E7D5 /* cat.png */,
+				ACFCB8B31ADF2E920041E7D5 /* clipboard52-791x1077.png */,
+				ACFCB8B41ADF2E920041E7D5 /* darkblue_background_grid_1024_768.png */,
+				ACFCB8C41ADF322F0041E7D5 /* textEffect.png */,
+				ACFCB8B51ADF2E920041E7D5 /* dog.png */,
+				ACFCB8B61ADF2E920041E7D5 /* pig.png */,
+				ACFCB8B71ADF2E920041E7D5 /* rabbit.png */,
+				ACFCB8C61ADF35370041E7D5 /* home.png */,
+				ACFCB8B81ADF2E920041E7D5 /* textEffect (1).png */,
+				ACFCB8B91ADF2E920041E7D5 /* textEffect (2).png */,
+				ACFCB8BA1ADF2E920041E7D5 /* textEffect (3).png */,
+				ACFCB8B01ADF2E7E0041E7D5 /* back.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACFCB8821ADE59550041E7D5 /* YoungAnimalDetectives */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACFCB8A21ADE59550041E7D5 /* Build configuration list for PBXNativeTarget "YoungAnimalDetectives" */;
+			buildPhases = (
+				ACFCB87F1ADE59550041E7D5 /* Sources */,
+				ACFCB8801ADE59550041E7D5 /* Frameworks */,
+				ACFCB8811ADE59550041E7D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YoungAnimalDetectives;
+			productName = YoungAnimalDetectives;
+			productReference = ACFCB8831ADE59550041E7D5 /* YoungAnimalDetectives.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACFCB8971ADE59550041E7D5 /* YoungAnimalDetectivesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACFCB8A51ADE59550041E7D5 /* Build configuration list for PBXNativeTarget "YoungAnimalDetectivesTests" */;
+			buildPhases = (
+				ACFCB8941ADE59550041E7D5 /* Sources */,
+				ACFCB8951ADE59550041E7D5 /* Frameworks */,
+				ACFCB8961ADE59550041E7D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACFCB89A1ADE59550041E7D5 /* PBXTargetDependency */,
+			);
+			name = YoungAnimalDetectivesTests;
+			productName = YoungAnimalDetectivesTests;
+			productReference = ACFCB8981ADE59550041E7D5 /* YoungAnimalDetectivesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACFCB87B1ADE59550041E7D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Li Jia'En, Nicholette";
+				TargetAttributes = {
+					ACFCB8821ADE59550041E7D5 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					ACFCB8971ADE59550041E7D5 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = ACFCB8821ADE59550041E7D5;
+					};
+				};
+			};
+			buildConfigurationList = ACFCB87E1ADE59550041E7D5 /* Build configuration list for PBXProject "YoungAnimalDetectives" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACFCB87A1ADE59550041E7D5;
+			productRefGroup = ACFCB8841ADE59550041E7D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACFCB8821ADE59550041E7D5 /* YoungAnimalDetectives */,
+				ACFCB8971ADE59550041E7D5 /* YoungAnimalDetectivesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACFCB8811ADE59550041E7D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFCB8BB1ADF2E920041E7D5 /* cat.png in Resources */,
+				ACFCB8B11ADF2E7E0041E7D5 /* back.png in Resources */,
+				ACFCB88E1ADE59550041E7D5 /* Main.storyboard in Resources */,
+				ACFCB8BF1ADF2E920041E7D5 /* pig.png in Resources */,
+				ACFCB8BC1ADF2E920041E7D5 /* clipboard52-791x1077.png in Resources */,
+				ACFCB8C01ADF2E920041E7D5 /* rabbit.png in Resources */,
+				ACFCB8BE1ADF2E920041E7D5 /* dog.png in Resources */,
+				ACFCB8C51ADF322F0041E7D5 /* textEffect.png in Resources */,
+				ACFCB8931ADE59550041E7D5 /* LaunchScreen.xib in Resources */,
+				ACFCB8BD1ADF2E920041E7D5 /* darkblue_background_grid_1024_768.png in Resources */,
+				ACFCB8C31ADF2E920041E7D5 /* textEffect (3).png in Resources */,
+				ACFCB8C71ADF35370041E7D5 /* home.png in Resources */,
+				ACFCB8C11ADF2E920041E7D5 /* textEffect (1).png in Resources */,
+				ACFCB8C21ADF2E920041E7D5 /* textEffect (2).png in Resources */,
+				ACFCB8901ADE59550041E7D5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFCB8961ADE59550041E7D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACFCB87F1ADE59550041E7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFCB88B1ADE59550041E7D5 /* MainViewController.swift in Sources */,
+				ACFCB8AC1ADE5BBD0041E7D5 /* ProjectDisplayViewController.swift in Sources */,
+				ACFCB8AE1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift in Sources */,
+				ACFCB8AA1ADE5B960041E7D5 /* ProjectsListViewController.swift in Sources */,
+				ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFCB8941ADE59550041E7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFCB89F1ADE59550041E7D5 /* YoungAnimalDetectivesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACFCB89A1ADE59550041E7D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACFCB8821ADE59550041E7D5 /* YoungAnimalDetectives */;
+			targetProxy = ACFCB8991ADE59550041E7D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACFCB88C1ADE59550041E7D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACFCB88D1ADE59550041E7D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACFCB8911ADE59550041E7D5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACFCB8921ADE59550041E7D5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACFCB8A01ADE59550041E7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		ACFCB8A11ADE59550041E7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACFCB8A31ADE59550041E7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YoungAnimalDetectives/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACFCB8A41ADE59550041E7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YoungAnimalDetectives/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACFCB8A61ADE59550041E7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YoungAnimalDetectivesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoungAnimalDetectives.app/YoungAnimalDetectives";
+			};
+			name = Debug;
+		};
+		ACFCB8A71ADE59550041E7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YoungAnimalDetectivesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoungAnimalDetectives.app/YoungAnimalDetectives";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACFCB87E1ADE59550041E7D5 /* Build configuration list for PBXProject "YoungAnimalDetectives" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFCB8A01ADE59550041E7D5 /* Debug */,
+				ACFCB8A11ADE59550041E7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACFCB8A21ADE59550041E7D5 /* Build configuration list for PBXNativeTarget "YoungAnimalDetectives" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFCB8A31ADE59550041E7D5 /* Debug */,
+				ACFCB8A41ADE59550041E7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACFCB8A51ADE59550041E7D5 /* Build configuration list for PBXNativeTarget "YoungAnimalDetectivesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFCB8A61ADE59550041E7D5 /* Debug */,
+				ACFCB8A71ADE59550041E7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACFCB87B1ADE59550041E7D5 /* Project object */;
+}

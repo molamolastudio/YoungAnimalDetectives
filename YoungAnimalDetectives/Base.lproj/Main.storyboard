@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--MainViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="MainViewController" customClass="MainViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkblue_background_grid_1024_768.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hw6-W9-j5F">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-7" y="0.0" width="807" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkb-yl-H5l" userLabel="ProjectListButton">
+                                <rect key="frame" x="395" y="544" width="189" height="30"/>
+                                <state key="normal" title="Proceed with investigations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="561" y="966" width="189" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="D6M-Ez-xMQ" kind="showDetail" id="Y3y-Ml-HXX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textEffect.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Uy-kr-PwJ" userLabel="Title1">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="100" width="543" height="261"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textEffect (3).png" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-ho-DOl">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="102" y="268" width="650" height="235"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textEffect (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="CHa-0k-AIV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="453" width="693" height="160"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Hw6-W9-j5F"/>
+                                <exclude reference="7Uy-kr-PwJ"/>
+                                <exclude reference="nrB-ho-DOl"/>
+                                <exclude reference="CHa-0k-AIV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Hw6-W9-j5F"/>
+                                <include reference="7Uy-kr-PwJ"/>
+                                <include reference="nrB-ho-DOl"/>
+                                <include reference="CHa-0k-AIV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="jnI-wG-9IO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-416.25"/>
+        </scene>
+        <!--ProjectsListViewController-->
+        <scene sceneID="IKY-a4-NaN">
+            <objects>
+                <viewController providesPresentationContextTransitionStyle="YES" id="D6M-Ez-xMQ" userLabel="ProjectsListViewController" customClass="ProjectDisplayViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X8h-05-0UK"/>
+                        <viewControllerLayoutGuide type="bottom" id="TQ5-zl-ETh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XwG-hO-gLS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkblue_background_grid_1024_768.png" translatesAutoresizingMaskIntoConstraints="NO" id="Li9-SA-IFZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-20" y="0.0" width="807" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLH-79-D4Q" userLabel="DogProject">
+                                <rect key="frame" x="124" y="309" width="30" height="30"/>
+                                <state key="normal" title="Dog">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="124" y="385" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="YXa-gV-97x" kind="showDetail" id="K7v-Ti-WJk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCE-nr-oXa" userLabel="CatProject">
+                                <rect key="frame" x="262" y="152" width="30" height="30"/>
+                                <state key="normal" title="Cat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="151" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="YXa-gV-97x" kind="showDetail" id="mFa-eD-dhC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMe-4o-IVJ" userLabel="RabbitProject">
+                                <rect key="frame" x="318" y="446" width="46" height="30"/>
+                                <state key="normal" title="Rabbit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="395" y="585" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="YXa-gV-97x" kind="showDetail" id="5ia-ZM-tvP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAc-Pl-FBs" userLabel="GuineaProject">
+                                <rect key="frame" x="446" y="265" width="49" height="30"/>
+                                <state key="normal" title="Guinea">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="535" y="324" width="49" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="YXa-gV-97x" kind="showDetail" id="MHn-cD-Yte"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-KE-2pI" userLabel="Home">
+                                <rect key="frame" x="543" y="20" width="41" height="30"/>
+                                <state key="normal" image="home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="652" y="20" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="4Up-wU-osm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRk-yk-Vbn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="57" width="320" height="320"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fC-PD-ExL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="385" width="320" height="320"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5i-FO-zEq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="719" width="320" height="320"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-f6-6Hd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="432" y="385" width="320" height="320"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Li9-SA-IFZ"/>
+                                <exclude reference="tRk-yk-Vbn"/>
+                                <exclude reference="8fC-PD-ExL"/>
+                                <exclude reference="Y5i-FO-zEq"/>
+                                <exclude reference="4dh-f6-6Hd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Li9-SA-IFZ"/>
+                                <include reference="tRk-yk-Vbn"/>
+                                <include reference="8fC-PD-ExL"/>
+                                <include reference="Y5i-FO-zEq"/>
+                                <include reference="4dh-f6-6Hd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="1024" height="768"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1F-JR-LNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="-329"/>
+        </scene>
+        <!--ProjectDisplayViewController-->
+        <scene sceneID="brH-kB-S4R">
+            <objects>
+                <viewController id="YXa-gV-97x" userLabel="ProjectDisplayViewController" customClass="ProjectDisplayViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SD2-b4-ZNi"/>
+                        <viewControllerLayoutGuide type="bottom" id="xHb-FB-XuY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="37L-oC-qez">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkblue_background_grid_1024_768.png" translatesAutoresizingMaskIntoConstraints="NO" id="4BT-pF-gdH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-20" y="0.0" width="807" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-5f-0HU" userLabel="Home">
+                                <rect key="frame" x="543" y="20" width="41" height="30"/>
+                                <state key="normal" image="home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="652" y="20" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="0ba-F4-XbW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-C9-TxE" userLabel="ObservationsButton">
+                                <rect key="frame" x="514" y="545" width="46" height="30"/>
+                                <state key="normal" title="Observations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="597" y="692" width="91" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="kuA-u6-sdr" kind="showDetail" id="cd6-GK-YOG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsb-XP-DQT" userLabel="Back">
+                                <rect key="frame" x="16" y="15" width="35" height="30"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="20" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="D6M-Ez-xMQ" kind="showDetail" id="x7r-XW-f4M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4BT-pF-gdH"/>
+                                <exclude reference="4Uz-5f-0HU"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="4BT-pF-gdH"/>
+                                <include reference="4Uz-5f-0HU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-XM-whw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345" y="393"/>
+        </scene>
+        <!--ObservationsNotepadViewController-->
+        <scene sceneID="byx-fW-Ab9">
+            <objects>
+                <viewController id="kuA-u6-sdr" userLabel="ObservationsNotepadViewController" customClass="ObservationsNotepadViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vra-XU-4eZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyv-oB-kta"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cat-KR-7Hg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard52-791x1077.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZI0-ik-aIq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-20" y="0.0" width="807" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pu1-Zk-rpx" userLabel="Back">
+                                <rect key="frame" x="16" y="15" width="35" height="30"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="YXa-gV-97x" kind="showDetail" id="GJK-Kd-qPR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8M-D5-Uk8" userLabel="Home">
+                                <rect key="frame" x="543" y="20" width="41" height="30"/>
+                                <state key="normal" image="home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="652" y="20" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="ZCe-KI-rfU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZI0-ik-aIq"/>
+                                <exclude reference="Pu1-Zk-rpx"/>
+                                <exclude reference="o8M-D5-Uk8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="ZI0-ik-aIq"/>
+                                <include reference="Pu1-Zk-rpx"/>
+                                <include reference="o8M-D5-Uk8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="1024" height="768"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZW7-OR-fuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="393"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back.png" width="296" height="308"/>
+        <image name="clipboard52-791x1077.png" width="791" height="1077"/>
+        <image name="darkblue_background_grid_1024_768.png" width="1024" height="768"/>
+        <image name="home.png" width="296" height="294"/>
+        <image name="textEffect (1).png" width="950" height="182"/>
+        <image name="textEffect (3).png" width="950" height="263"/>
+        <image name="textEffect.png" width="950" height="337"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Up-wU-osm"/>
+        <segue reference="Y3y-Ml-HXX"/>
+        <segue reference="mFa-eD-dhC"/>
+    </inferredMetricsTieBreakers>
+</document>
