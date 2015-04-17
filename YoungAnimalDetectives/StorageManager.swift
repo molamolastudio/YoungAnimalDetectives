@@ -13,7 +13,11 @@ class StorageManager {
     class func saveProjectToArchives() {
         let dirs : [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
+        
         let identifier = SharedData.sharedInstance.currentProject
+        
+        println("saving" + identifier!)
+        
         let project = SharedData.sharedInstance.project
         let nickname = SharedData.sharedInstance.nickname
         let type = SharedData.sharedInstance.type
@@ -54,7 +58,10 @@ class StorageManager {
         let archiver = NSKeyedUnarchiver(forReadingWithData: data!)
         SharedData.sharedInstance.project = archiver.decodeObjectForKey("project") as! Project?
         SharedData.sharedInstance.nickname = archiver.decodeObjectForKey("nickname") as! String?
+        println("saving" + SharedData.sharedInstance.nickname!)
         SharedData.sharedInstance.type = archiver.decodeObjectForKey("type") as! String?
+        println("saving" + SharedData.sharedInstance.type!)
+
         
     }
     

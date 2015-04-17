@@ -17,11 +17,13 @@ class ProjectDisplayViewController: UIViewController {
     @IBAction func didTypeNickname(sender: AnyObject) {
         SharedData.sharedInstance.nickname = nicknameField.text
         StorageManager.saveProjectToArchives()
+        nicknameField.resignFirstResponder()
     }
     @IBOutlet weak var typeField: UITextField!
     @IBAction func didTypeType(sender: AnyObject) {
-        SharedData.sharedInstance.nickname = typeField.text
+        SharedData.sharedInstance.type = typeField.text
         StorageManager.saveProjectToArchives()
+        typeField.resignFirstResponder()
     }
     
     @IBOutlet weak var individualNickname: UITextView!
@@ -30,6 +32,8 @@ class ProjectDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println(SharedData.sharedInstance.currentProject)
+        
         let FONT_SIZE = CGFloat(40)
         let FONT_WHITE_COLOR = CGFloat(1.0)
         let FONT_WHITE_ALPHA = CGFloat(1.0)
@@ -47,14 +51,15 @@ class ProjectDisplayViewController: UIViewController {
             default:
                 break
             }
-            StorageManager.loadProjectFromArchives()
         }
-        
+
         if let name = SharedData.sharedInstance.nickname {
             nicknameField.hidden = true
             individualNickname.text = name
             individualNickname.font = UIFont(descriptor: UIFontDescriptor(name: Constants.Font.CHALKDUSTER, size: 0), size: FONT_SIZE)
             individualNickname.textColor = UIColor(white: FONT_WHITE_COLOR, alpha: FONT_WHITE_ALPHA)
+        } else {
+            individualNickname.hidden = true
         }
         
         if let type = SharedData.sharedInstance.type {
@@ -62,6 +67,8 @@ class ProjectDisplayViewController: UIViewController {
             individualType.text = type
             individualType.font = UIFont(descriptor: UIFontDescriptor(name: Constants.Font.CHALKDUSTER, size: 0), size: FONT_SIZE)
             individualType.textColor = UIColor(white: FONT_WHITE_COLOR, alpha: FONT_WHITE_ALPHA)
+        } else {
+            individualType.hidden = true
         }
         
         animalProfileImage.reloadInputViews()

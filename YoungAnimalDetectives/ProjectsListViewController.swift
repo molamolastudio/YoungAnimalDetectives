@@ -21,6 +21,9 @@ class ProjectsListViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        SharedData.sharedInstance.nickname = nil
+        SharedData.sharedInstance.type = nil
+        
         if segue.identifier == Constants.Segue.DOG {
             SharedData.sharedInstance.currentProject = Constants.Project.DOG
             StorageManager.loadProjectFromArchives()
@@ -34,5 +37,8 @@ class ProjectsListViewController: UIViewController {
             SharedData.sharedInstance.currentProject = Constants.Project.RABBIT
             StorageManager.loadProjectFromArchives()
         }
+        
+        println(SharedData.sharedInstance.nickname)
+        println(SharedData.sharedInstance.type)
     }
 }
