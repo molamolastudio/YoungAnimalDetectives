@@ -333,35 +333,6 @@
                                     <rect key="frame" x="448" y="379" width="235" height="30"/>
                                 </variation>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7E-m6-OXj" userLabel="EthogramView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-C9-TxE" userLabel="ObservationsButton">
-                                        <rect key="frame" x="514" y="545" width="46" height="30"/>
-                                        <state key="normal" image="notepadbutton.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="503" y="318" width="150" height="150"/>
-                                        </variation>
-                                        <connections>
-                                            <segue destination="kuA-u6-sdr" kind="show" id="cd6-GK-YOG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="kIi-C9-TxE"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="504" width="653" height="468"/>
-                                    <mask key="subviews">
-                                        <include reference="kIi-C9-TxE"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-vB-CID" userLabel="IndividualType">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -371,6 +342,24 @@
                                     <rect key="frame" x="448" y="367" width="240" height="53"/>
                                 </variation>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-Qq-1Kz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="447" width="737" height="520"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-C9-TxE" userLabel="ObservationsButton">
+                                <rect key="frame" x="514" y="545" width="46" height="30"/>
+                                <state key="normal" image="notepadbutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="619" y="877" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="kuA-u6-sdr" kind="show" id="cd6-GK-YOG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -384,8 +373,9 @@
                                 <exclude reference="efm-6o-Qgr"/>
                                 <exclude reference="89u-7U-SsP"/>
                                 <exclude reference="NgN-Mw-xmD"/>
-                                <exclude reference="s7E-m6-OXj"/>
                                 <exclude reference="yXZ-vB-CID"/>
+                                <exclude reference="2Lh-Qq-1Kz"/>
+                                <exclude reference="kIi-C9-TxE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -399,8 +389,9 @@
                                 <include reference="efm-6o-Qgr"/>
                                 <include reference="89u-7U-SsP"/>
                                 <include reference="NgN-Mw-xmD"/>
-                                <include reference="s7E-m6-OXj"/>
                                 <include reference="yXZ-vB-CID"/>
+                                <include reference="2Lh-Qq-1Kz"/>
+                                <include reference="kIi-C9-TxE"/>
                             </mask>
                         </variation>
                     </view>
@@ -411,7 +402,6 @@
                         <outlet property="individualNickname" destination="Sla-Qj-a9u" id="Kii-rM-H54"/>
                         <outlet property="individualType" destination="yXZ-vB-CID" id="gpz-Ax-Pob"/>
                         <outlet property="nicknameField" destination="efm-6o-Qgr" id="MMQ-hs-e6K"/>
-                        <outlet property="projectEthogramImage" destination="s7E-m6-OXj" id="mdN-Re-zxu"/>
                         <outlet property="typeField" destination="NgN-Mw-xmD" id="Pdh-I3-mAi"/>
                     </connections>
                 </viewController>
@@ -521,6 +511,7 @@
         <image name="forward.png" width="227" height="234"/>
         <image name="home.png" width="296" height="294"/>
         <image name="notepadbutton.png" width="320" height="320"/>
+        <image name="table.png" width="670" height="500"/>
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
