@@ -299,22 +299,25 @@
                                     <rect key="frame" x="448" y="164" width="240" height="53"/>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-Qj-a9u" userLabel="IndividualNickname">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-Qj-a9u" userLabel="IndividualNickname">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="448" y="213" width="240" height="53"/>
                                 </variation>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efm-6o-Qgr" userLabel="NicknameField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efm-6o-Qgr" userLabel="NicknameField">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="448" y="225" width="235" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="didTypeNickname:" destination="YXa-gV-97x" eventType="editingDidEnd" id="hfU-Zd-eMX"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Type:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89u-7U-SsP" userLabel="Type">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -327,21 +330,15 @@
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgN-Mw-xmD" userLabel="TypeField">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="448" y="379" width="235" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="didTypeType:" destination="YXa-gV-97x" eventType="editingDidEnd" id="3AK-gU-jZd"/>
+                                </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-vB-CID" userLabel="IndividualType">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="448" y="367" width="240" height="53"/>
-                                </variation>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-Qq-1Kz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -360,6 +357,15 @@
                                     <segue destination="kuA-u6-sdr" kind="show" id="cd6-GK-YOG"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-vB-CID" userLabel="IndividualType">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="448" y="367" width="240" height="53"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -373,9 +379,9 @@
                                 <exclude reference="efm-6o-Qgr"/>
                                 <exclude reference="89u-7U-SsP"/>
                                 <exclude reference="NgN-Mw-xmD"/>
-                                <exclude reference="yXZ-vB-CID"/>
                                 <exclude reference="2Lh-Qq-1Kz"/>
                                 <exclude reference="kIi-C9-TxE"/>
+                                <exclude reference="yXZ-vB-CID"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -389,9 +395,9 @@
                                 <include reference="efm-6o-Qgr"/>
                                 <include reference="89u-7U-SsP"/>
                                 <include reference="NgN-Mw-xmD"/>
-                                <include reference="yXZ-vB-CID"/>
                                 <include reference="2Lh-Qq-1Kz"/>
                                 <include reference="kIi-C9-TxE"/>
+                                <include reference="yXZ-vB-CID"/>
                             </mask>
                         </variation>
                     </view>

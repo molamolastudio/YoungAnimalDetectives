@@ -23,15 +23,16 @@ class ProjectsListViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Constants.Segue.DOG {
             SharedData.sharedInstance.currentProject = Constants.Project.DOG
+            StorageManager.loadProjectFromArchives()
         } else if segue.identifier == Constants.Segue.CAT {
             SharedData.sharedInstance.currentProject = Constants.Project.CAT
+            StorageManager.loadProjectFromArchives()
         } else if segue.identifier == Constants.Segue.GUINEAPIG {
             SharedData.sharedInstance.currentProject = Constants.Project.GUINEAPIG
+            StorageManager.loadProjectFromArchives()
         } else if segue.identifier == Constants.Segue.RABBIT {
             SharedData.sharedInstance.currentProject = Constants.Project.RABBIT
+            StorageManager.loadProjectFromArchives()
         }
     }
-
-    
-    
 }

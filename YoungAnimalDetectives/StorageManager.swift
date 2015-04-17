@@ -10,7 +10,7 @@ import Foundation
 
 class StorageManager {
  
-    func saveProjectToArchives() {
+    class func saveProjectToArchives() {
         let dirs : [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         let identifier = SharedData.sharedInstance.currentProject
@@ -22,23 +22,13 @@ class StorageManager {
             let dir = dirs![0]; //documents directory
             let path = dir.stringByAppendingPathComponent(identifier!);
             
-            let projData = NSMutableData();
-            let projArchiver = NSKeyedArchiver(forWritingWithMutableData: projData)
-            projArchiver.encodeObject(project, forKey: "project")
-            projArchiver.finishEncoding()
-            projData.writeToFile(path, atomically: true)
-
-            let nameData = NSMutableData();
-            let nameArchiver = NSKeyedArchiver(forWritingWithMutableData: nameData)
-            nameArchiver.encodeObject(nickname, forKey: "nickname")
-            nameArchiver.finishEncoding()
-            nameData.writeToFile(path, atomically: true)
-            
-            let typeData = NSMutableData();
-            let typeArchiver = NSKeyedArchiver(forWritingWithMutableData: typeData)
-            typeArchiver.encodeObject(nickname, forKey: "type")
-            typeArchiver.finishEncoding()
-            typeData.writeToFile(path, atomically: true)
+            let data = NSMutableData();
+            let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
+            archiver.encodeObject(project, forKey: "project")
+            archiver.encodeObject(nickname, forKey: "nickname")
+            archiver.encodeObject(type, forKey: "type")
+            archiver.finishEncoding()
+            data.writeToFile(path, atomically: true)
         }
     }
     

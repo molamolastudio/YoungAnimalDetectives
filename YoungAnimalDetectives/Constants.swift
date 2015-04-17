@@ -31,5 +31,7 @@ struct Constants {
         static let SQUARE_RABBIT = "squarerabbit"
     }
     
-    
+    struct Font {
+        static let CHALKDUSTER = "Chalkduster"
+    }
 }
