@@ -22,21 +22,13 @@ class ProjectsListViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Constants.Segue.DOG {
-            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
-                destinationVC.projectName = Constants.Project.DOG
-            }
+            SharedData.sharedInstance.currentProject = Constants.Project.DOG
         } else if segue.identifier == Constants.Segue.CAT {
-            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
-                destinationVC.projectName = Constants.Project.CAT
-            }
+            SharedData.sharedInstance.currentProject = Constants.Project.CAT
         } else if segue.identifier == Constants.Segue.GUINEAPIG {
-            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
-                destinationVC.projectName = Constants.Project.GUINEAPIG
-            }
+            SharedData.sharedInstance.currentProject = Constants.Project.GUINEAPIG
         } else if segue.identifier == Constants.Segue.RABBIT {
-            if let destinationVC = segue.destinationViewController as? ProjectDisplayViewController {
-                destinationVC.projectName = Constants.Project.RABBIT
-            }
+            SharedData.sharedInstance.currentProject = Constants.Project.RABBIT
         }
     }
 

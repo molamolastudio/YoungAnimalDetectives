@@ -9,7 +9,6 @@
 import UIKit
 
 class ProjectDisplayViewController: UIViewController {
-    var projectName: String?
     
     @IBOutlet weak var animalProfileImage: UIImageView!
     @IBOutlet weak var projectEthogramImage: UIView!
@@ -24,7 +23,7 @@ class ProjectDisplayViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if let project = projectName {
+        if let project = SharedData.sharedInstance.currentProject {
             switch (project) {
             case Constants.Project.DOG:
                 animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_DOG)
