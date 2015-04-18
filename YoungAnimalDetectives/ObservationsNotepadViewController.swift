@@ -70,11 +70,13 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         let cell = observationTable.dequeueReusableCellWithIdentifier(obsCell, forIndexPath: indexPath) as! UITableViewCell
         let observation = SharedData.sharedInstance.project!.sessions[0].observations[indexPath.row]
         
-        let timeLabel = cell.viewWithTag(11) as! UILabel
+        let dateLabel = cell.viewWithTag(11) as! UILabel
+        let timeLabel = cell.viewWithTag(14) as! UILabel
         let behaviourLabel = cell.viewWithTag(12) as! UILabel
         let infoLabel = cell.viewWithTag(13) as! UILabel
         
-        timeLabel.text = observation.timestamp.toBiolifeDateFormat()
+        dateLabel.text = observation.timestamp.toDisplayDateFormat()
+        timeLabel.text = observation.timestamp.toDisplayTimeFormat()
         behaviourLabel.text = observation.state.name
         infoLabel.text = observation.information
         
@@ -83,8 +85,13 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         return cell
     }
     
+    // This function sets the height of the observation row
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(86)
+    }
+    
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        return false
     }
     
     // This function deletes a game file

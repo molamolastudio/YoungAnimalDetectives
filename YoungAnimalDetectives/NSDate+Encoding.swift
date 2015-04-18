@@ -15,4 +15,18 @@ extension NSDate {
         let dateFormatter = BiolifeDateFormatter()
         return dateFormatter.formatDate(self)
     }
+    
+    func toDisplayDateFormat() -> String {
+        var dateFormatter = NSDateFormatter()
+
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        return dateFormatter.stringFromDate(self)
+    }
+    
+    func toDisplayTimeFormat() -> String {
+        var timeFormatter = NSDateFormatter()
+        
+        timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        return timeFormatter.stringFromDate(self)
+    }
 }
