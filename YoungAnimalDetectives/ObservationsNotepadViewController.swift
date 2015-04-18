@@ -65,14 +65,18 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     
     // This function sets the observation.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let obsCell = ObservationTableCell.id
+        let obsCell = Constants.Table.OBSERVATION_CELL_ID
         
-        let cell = observationTable.dequeueReusableCellWithIdentifier(obsCell, forIndexPath: indexPath) as! ObservationTableCell
+        let cell = observationTable.dequeueReusableCellWithIdentifier(obsCell, forIndexPath: indexPath) as! UITableViewCell
         let observation = SharedData.sharedInstance.project!.sessions[0].observations[indexPath.row]
         
-        cell.timeLabel.text = observation.timestamp.toBiolifeDateFormat()
-        cell.behaviourLabel.text = observation.state.name
-        cell.infoLabel.text = observation.information
+        let timeLabel = cell.viewWithTag(11) as! UILabel
+        let behaviourLabel = cell.viewWithTag(12) as! UILabel
+        let infoLabel = cell.viewWithTag(13) as! UILabel
+        
+        timeLabel.text = observation.timestamp.toBiolifeDateFormat()
+        behaviourLabel.text = observation.state.name
+        infoLabel.text = observation.information
         
         println("Accessed")
         
