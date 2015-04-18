@@ -17,6 +17,7 @@
 		ACDE1FA51AE0CE8D001A4684 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */; };
 		ACDE1FA71AE0D109001A4684 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA61AE0D109001A4684 /* StorageManager.swift */; };
 		ACDE1FA91AE17A3D001A4684 /* ObservationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA81AE17A3D001A4684 /* ObservationTableCell.swift */; };
+		ACDE1FAD1AE1DFCA001A4684 /* StandardEthogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */; };
 		ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */; };
 		ACFCB88B1ADE59550041E7D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB88A1ADE59550041E7D5 /* MainViewController.swift */; };
 		ACFCB88E1ADE59550041E7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB88C1ADE59550041E7D5 /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		ACDE1FA61AE0D109001A4684 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		ACDE1FA81AE17A3D001A4684 /* ObservationTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationTableCell.swift; sourceTree = "<group>"; };
+		ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardEthogram.swift; sourceTree = "<group>"; };
 		ACFCB8831ADE59550041E7D5 /* YoungAnimalDetectives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoungAnimalDetectives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCB8871ADE59550041E7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				ACFCB8FD1ADF98F80041E7D5 /* UserAuthService.swift */,
 				ACFCB9201ADFABD30041E7D5 /* Constants.swift */,
 				ACDE1FA81AE17A3D001A4684 /* ObservationTableCell.swift */,
+				ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */,
 				ACDE1FA61AE0D109001A4684 /* StorageManager.swift */,
 				ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */,
 				ACFCB88C1ADE59550041E7D5 /* Main.storyboard */,
@@ -488,6 +491,7 @@
 				ACFCB8EE1ADF92780041E7D5 /* Storable.swift in Sources */,
 				ACFCB8F11ADF92780041E7D5 /* Session.swift in Sources */,
 				ACFCB9191ADFA9330041E7D5 /* BLTLocationProtocol.swift in Sources */,
+				ACDE1FAD1AE1DFCA001A4684 /* StandardEthogram.swift in Sources */,
 				ACFCB9001ADF99340041E7D5 /* BiolifeModel.swift in Sources */,
 				ACFCB91A1ADFA9330041E7D5 /* BLTObservationProtocol.swift in Sources */,
 				ACFCB9251ADFAC270041E7D5 /* BLTProjectDeserializer.swift in Sources */,
