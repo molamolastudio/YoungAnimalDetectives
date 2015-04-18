@@ -418,6 +418,7 @@
         <!--ObservationsNotepadViewController-->
         <scene sceneID="byx-fW-Ab9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZW7-OR-fuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kuA-u6-sdr" userLabel="ObservationsNotepadViewController" customClass="ObservationsNotepadViewController" customModule="YoungAnimalDetectives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vra-XU-4eZ"/>
@@ -460,6 +461,15 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5as-hS-aYo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell tag="10" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ObservationTableCell" id="t4h-vq-GGY" customClass="ObservationTableCell" customModule="YoungAnimalDetectives" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t4h-vq-GGY" id="vFL-VY-Nmf">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="102" y="128" width="564" height="781"/>
                                 </variation>
@@ -497,8 +507,10 @@
                     <value key="contentSizeForViewInPopover" type="size" width="1024" height="768"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="observationTable" destination="5as-hS-aYo" id="942-Fz-weg"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZW7-OR-fuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1653.75" y="639.75"/>
         </scene>
@@ -521,8 +533,8 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K7v-Ti-WJk"/>
         <segue reference="x7r-XW-f4M"/>
-        <segue reference="4Up-wU-osm"/>
+        <segue reference="GJK-Kd-qPR"/>
+        <segue reference="ZCe-KI-rfU"/>
     </inferredMetricsTieBreakers>
 </document>

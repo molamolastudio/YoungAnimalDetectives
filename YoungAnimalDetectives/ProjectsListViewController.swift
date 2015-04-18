@@ -23,6 +23,7 @@ class ProjectsListViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         SharedData.sharedInstance.nickname = nil
         SharedData.sharedInstance.type = nil
+        SharedData.sharedInstance.project = nil
         
         if segue.identifier == Constants.Segue.DOG {
             SharedData.sharedInstance.currentProject = Constants.Project.DOG

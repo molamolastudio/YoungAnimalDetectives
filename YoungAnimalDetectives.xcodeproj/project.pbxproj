@@ -16,6 +16,7 @@
 		ACB479EE1AE0C00000F61C53 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479ED1AE0C00000F61C53 /* table.png */; };
 		ACDE1FA51AE0CE8D001A4684 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */; };
 		ACDE1FA71AE0D109001A4684 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA61AE0D109001A4684 /* StorageManager.swift */; };
+		ACDE1FA91AE17A3D001A4684 /* ObservationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA81AE17A3D001A4684 /* ObservationTableCell.swift */; };
 		ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */; };
 		ACFCB88B1ADE59550041E7D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB88A1ADE59550041E7D5 /* MainViewController.swift */; };
 		ACFCB88E1ADE59550041E7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB88C1ADE59550041E7D5 /* Main.storyboard */; };
@@ -93,6 +94,7 @@
 		ACB479ED1AE0C00000F61C53 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
 		ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		ACDE1FA61AE0D109001A4684 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		ACDE1FA81AE17A3D001A4684 /* ObservationTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationTableCell.swift; sourceTree = "<group>"; };
 		ACFCB8831ADE59550041E7D5 /* YoungAnimalDetectives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoungAnimalDetectives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCB8871ADE59550041E7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */,
 				ACFCB8FD1ADF98F80041E7D5 /* UserAuthService.swift */,
 				ACFCB9201ADFABD30041E7D5 /* Constants.swift */,
+				ACDE1FA81AE17A3D001A4684 /* ObservationTableCell.swift */,
 				ACDE1FA61AE0D109001A4684 /* StorageManager.swift */,
 				ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */,
 				ACFCB88C1ADE59550041E7D5 /* Main.storyboard */,
@@ -467,6 +470,7 @@
 				ACFCB8F01ADF92780041E7D5 /* Ethogram.swift in Sources */,
 				ACFCB8F51ADF92780041E7D5 /* Weather.swift in Sources */,
 				ACFCB8F21ADF92780041E7D5 /* Observation.swift in Sources */,
+				ACDE1FA91AE17A3D001A4684 /* ObservationTableCell.swift in Sources */,
 				ACDE1FA51AE0CE8D001A4684 /* SharedData.swift in Sources */,
 				ACFCB8FE1ADF98F80041E7D5 /* UserAuthService.swift in Sources */,
 				ACFCB8AE1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift in Sources */,
