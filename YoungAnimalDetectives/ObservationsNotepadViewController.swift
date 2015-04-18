@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ObservationsNotepadViewController: UIViewController, UITableViewDataSource {
+class ObservationsNotepadViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var observationTable: UITableView!
     
@@ -16,6 +16,32 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        if let nick = SharedData.sharedInstance.nickname {
+            let individual = Individual(label: nick)
+            
+            if let project = SharedData.sharedInstance.project {
+                
+                var session: Session
+                if project.sessions.count == 0 {
+                    session = Session(project: SharedData.sharedInstance.project!, name: "Unlimited Session", type: SessionType.Focal)
+                    project.addSessions([session])
+                } else {
+                    session = SharedData.sharedInstance.project!.sessions[0]
+                }
+                
+                let ethogram: Ethogram = StandardEthogram.getEthogram()
+                var observation = Observation(session: session, individual: individual, state: ethogram.behaviourStates[0], timestamp: NSDate(), information: "")
+                session.addObservation([observation])
+                
+                StorageManager.saveProjectToArchives()
+            }
+        }
+        
+        
+        observationTable.delegate = self
+        observationTable.dataSource = self
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,11 +51,12 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     
     // This function sets the number of sections in the table view.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     // This function sets the number of rows in table view.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if let project = SharedData.sharedInstance.project {
             return project.sessions[0].observations.count
         }
@@ -46,6 +73,8 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         cell.timeLabel.text = observation.timestamp.toBiolifeDateFormat()
         cell.behaviourLabel.text = observation.state.name
         cell.infoLabel.text = observation.information
+        
+        println("Accessed")
         
         return cell
     }

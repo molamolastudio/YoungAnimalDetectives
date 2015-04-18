@@ -34,4 +34,8 @@ struct Constants {
     struct Font {
         static let CHALKDUSTER = "Chalkduster"
     }
+    
+    struct Table {
+        static let OBSERVATION_CELL_ID = "ObservationTableCell"
+    }
 }

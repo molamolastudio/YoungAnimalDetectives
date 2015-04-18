@@ -57,12 +57,13 @@ class StorageManager {
         
         let archiver = NSKeyedUnarchiver(forReadingWithData: data!)
         SharedData.sharedInstance.project = archiver.decodeObjectForKey("project") as! Project?
-        SharedData.sharedInstance.nickname = archiver.decodeObjectForKey("nickname") as! String?
-        println("saving" + SharedData.sharedInstance.nickname!)
-        SharedData.sharedInstance.type = archiver.decodeObjectForKey("type") as! String?
-        println("saving" + SharedData.sharedInstance.type!)
-
+        if SharedData.sharedInstance.project == nil {
+            let ethogram: Ethogram = StandardEthogram.getEthogram()
+            SharedData.sharedInstance.project = Project(name: identifier!, ethogram: ethogram)
+        }
         
+        SharedData.sharedInstance.nickname = archiver.decodeObjectForKey("nickname") as! String?
+        SharedData.sharedInstance.type = archiver.decodeObjectForKey("type") as! String?
     }
     
     class func deleteProjectFromArchives(identifier: String) -> Bool {

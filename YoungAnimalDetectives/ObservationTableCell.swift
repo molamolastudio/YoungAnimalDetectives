@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 
 public class ObservationTableCell : UITableViewCell {
-    static let id: String = "ObservationTableCell"
+    static let id: String = Constants.Table.OBSERVATION_CELL_ID
+    override public var reuseIdentifier: String {
+        get { return Constants.Table.OBSERVATION_CELL_ID }
+    }
     
     var timeLabel: UILabel
     var behaviourLabel: UILabel

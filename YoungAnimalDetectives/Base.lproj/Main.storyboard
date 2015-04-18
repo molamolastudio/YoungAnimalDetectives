@@ -462,10 +462,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell tag="10" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ObservationTableCell" id="t4h-vq-GGY" customClass="ObservationTableCell" customModule="YoungAnimalDetectives" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ObservationTableCell" id="rbj-NC-m6v" customClass="ObservationTableCell" customModule="YoungAnimalDetectives" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t4h-vq-GGY" id="vFL-VY-Nmf">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rbj-NC-m6v" id="oaS-Pc-e0e">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

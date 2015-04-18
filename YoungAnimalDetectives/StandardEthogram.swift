@@ -9,9 +9,8 @@
 import Foundation
 
 class StandardEthogram {
-    var ethogram: Ethogram
     
-    init() {
+    class func getEthogram() -> Ethogram {
         let movingBS = BehaviourState(name: "Moving", information: "Moving in a specific direction with an aim")
         let groomingBS = BehaviourState(name: "Grooming", information: "Animal cleaning, licking or stroking itself")
         let ingestingBS = BehaviourState(name: "Eating/Drinking", information: "Animal ingesting objects or liquids")
@@ -25,7 +24,7 @@ class StandardEthogram {
         ethogram.addBehaviourState(restingBS)
         ethogram.addBehaviourState(notVisibleBS)
         
-        self.ethogram = ethogram
+        return ethogram
     }
     
 }
