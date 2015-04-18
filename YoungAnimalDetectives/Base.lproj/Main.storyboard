@@ -287,7 +287,7 @@
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="124" y="28" width="511" height="128"/>
+                                    <rect key="frame" x="108" y="28" width="553" height="128"/>
                                 </variation>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nickname:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-Kl-QjS" userLabel="Nickname">
@@ -408,6 +408,7 @@
                         <outlet property="individualNickname" destination="Sla-Qj-a9u" id="Kii-rM-H54"/>
                         <outlet property="individualType" destination="yXZ-vB-CID" id="gpz-Ax-Pob"/>
                         <outlet property="nicknameField" destination="efm-6o-Qgr" id="MMQ-hs-e6K"/>
+                        <outlet property="projectTitle" destination="fyu-uG-exL" id="ztG-3P-PzL"/>
                         <outlet property="typeField" destination="NgN-Mw-xmD" id="Pdh-I3-mAi"/>
                     </connections>
                 </viewController>

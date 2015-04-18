@@ -18,6 +18,11 @@ struct Constants {
     }
     
     struct Project {
+        static let TITLE_DOG = "Title: Investigate a day in the life of a dog"
+        static let TITLE_CAT = "Title: Investigate a day in the life of a cat"
+        static let TITLE_GUINEAPIG = "Title: Investigate a day in the life of a guinea pig"
+        static let TITLE_RABBIT = "Title: Investigate a day in the life of a rabbit"
+        
         static let DOG = "project_dog"
         static let CAT = "project_cat"
         static let GUINEAPIG = "project_guineapig"
