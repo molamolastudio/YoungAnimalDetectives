@@ -59,6 +59,8 @@ class ProjectDisplayViewController: UIViewController {
             }
         }
         
+        StorageManager.loadProjectFromArchives()
+        
         projectTitle.font = UIFont(descriptor: UIFontDescriptor(name: Constants.Font.CHALKDUSTER, size: 0), size: FONT_SIZE_TITLE)
         projectTitle.textColor = UIColor(white: FONT_WHITE_COLOR, alpha: FONT_WHITE_ALPHA)
 
