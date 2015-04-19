@@ -44,6 +44,7 @@ class Project: BiolifeModel, Storable {
         self._members = [UserAuthService.sharedInstance.user]
   //      self.saveToArchives()
     }
+
     
     func getIndexOfSession(session: Session) -> Int? {
         for var i = 0; i < _sessions.count; i++ {
@@ -269,7 +270,7 @@ class Project: BiolifeModel, Storable {
     }
     
     class func deleteFromArchives(identifier: String) -> Bool {
-        
+        let fileManager = NSFileManager.defaultManager()
         let dirs: [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         if (dirs == nil) {
@@ -280,15 +281,17 @@ class Project: BiolifeModel, Storable {
         let dir = dirs![0]
         let path = dir.stringByAppendingPathComponent("Project" + identifier)
         
-        // Delete the file and see if it was successful
-        var error: NSError?
-        let success :Bool = NSFileManager.defaultManager().removeItemAtPath(path, error: &error)
+        if fileManager.fileExistsAtPath(path) {
+            // Delete the file and see if it was successful
+            var error: NSError?
+            let success :Bool = NSFileManager.defaultManager().removeItemAtPath(path, error: &error)
         
-        if error != nil {
-            println(error)
+            if error != nil {
+                println(error)
+            }
+            return success
         }
-
-        return success;
+        return false
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -356,11 +359,14 @@ class Project: BiolifeModel, Storable {
 func ==(lhs: Project, rhs: Project) -> Bool {
     if lhs.name != rhs.name { return false }
     if lhs.ethogram != rhs.ethogram { return false }
-    if lhs.admins != rhs.admins { return false }
-    if lhs.members != rhs.members { return false }
-    if lhs.sessions != rhs.sessions { return false }
-    if lhs.individuals != rhs.individuals { return false }
+    if lhs.admins.count != rhs.admins.count { return false }
+    if lhs.members.count != rhs.members.count { return false }
+    if lhs.sessions.count != rhs.sessions.count { return false }
+    if lhs.individuals.count != rhs.individuals.count { return false }
     return true
+}
+func !=(lhs: Project, rhs: Project) -> Bool {
+    return !(lhs == rhs)
 }
 
 extension Project: NSCoding {

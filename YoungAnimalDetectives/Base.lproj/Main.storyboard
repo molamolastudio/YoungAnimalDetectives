@@ -568,6 +568,19 @@
                                     <rect key="frame" x="208" y="144" width="137" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-U0-RtI" userLabel="ExportButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Export to BioLifeTracker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="533" y="41" width="139" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ExportProjectButton:" destination="kuA-u6-sdr" eventType="touchUpInside" id="v8l-85-ZiX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -580,6 +593,7 @@
                                 <exclude reference="j6j-FE-urD"/>
                                 <exclude reference="wJD-mu-7FI"/>
                                 <exclude reference="3ly-vI-AS4"/>
+                                <exclude reference="3ba-U0-RtI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -592,6 +606,7 @@
                                 <include reference="j6j-FE-urD"/>
                                 <include reference="wJD-mu-7FI"/>
                                 <include reference="3ly-vI-AS4"/>
+                                <include reference="3ba-U0-RtI"/>
                             </mask>
                         </variation>
                     </view>

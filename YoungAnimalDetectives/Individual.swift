@@ -82,6 +82,9 @@ func ==(lhs: Individual, rhs: Individual) -> Bool {
     return true
 }
 
+func !=(lhs: Individual, rhs: Individual) -> Bool {
+    return !(lhs == rhs)
+}
 
 extension Individual: NSCoding {
     override func encodeWithCoder(aCoder: NSCoder) {
@@ -99,8 +102,8 @@ extension Individual {
         var photoDictionary = NSMutableDictionary()
         if let photo = photo {
             photo.encodeRecursivelyWithDictionary(photoDictionary)
+            dictionary.setValue(photoDictionary, forKey: "photo")
         }
-        dictionary.setValue(photoDictionary, forKey: "photo")
         
         var tagInfos = [NSDictionary]()
         for tag in tags {
@@ -110,6 +113,6 @@ extension Individual {
         }
         dictionary.setValue(tagInfos, forKey: "tags")
         
-        super.encodeWithDictionary(dictionary)
+        super.encodeRecursivelyWithDictionary(dictionary)
     }
 }

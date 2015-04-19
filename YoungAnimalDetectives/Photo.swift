@@ -37,6 +37,14 @@ class Photo: BiolifeModel {
     }
 }
 
+func ==(lhs: Photo, rhs: Photo) -> Bool {
+    return lhs.image.size == rhs.image.size
+}
+
+func !=(lhs: Photo, rhs: Photo) -> Bool {
+    return !(lhs == rhs)
+}
+
 extension Photo: NSCoding {
     override func encodeWithCoder(aCoder: NSCoder) {
         super.encodeWithCoder(aCoder)
@@ -49,5 +57,6 @@ extension Photo {
         let imageString = UIImageJPEGRepresentation(image, 1.0)
             .base64EncodedStringWithOptions(nil)
         dictionary.setValue(imageString, forKey: "image")
+        super.encodeRecursivelyWithDictionary(dictionary)
     }
 }

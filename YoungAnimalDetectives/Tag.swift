@@ -38,11 +38,16 @@ class Tag: BiolifeModel {
         self._name = aDecoder.decodeObjectForKey("name") as! String
         super.init(coder: aDecoder)
     }
+    
 }
 
 func ==(lhs: Tag, rhs: Tag) -> Bool {
     if lhs.name != rhs.name { return false }
     return true
+}
+
+func !=(lhs: Tag, rhs: Tag) -> Bool {
+    return !(lhs == rhs)
 }
 
 extension Tag: NSCoding {
@@ -54,6 +59,7 @@ extension Tag: NSCoding {
 
 extension Tag {
     override func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
-        encodeWithDictionary(dictionary)
+        dictionary.setValue(name, forKey: "name")
+        super.encodeRecursivelyWithDictionary(dictionary)
     }
 }

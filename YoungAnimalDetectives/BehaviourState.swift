@@ -31,7 +31,7 @@ class BehaviourState: BiolifeModel {
         self._name = name
         self._information = information
     }
-    
+
     func updateName(name: String) {
         self._name = name
         updateBehaviourState()
@@ -67,6 +67,9 @@ func ==(lhs: BehaviourState, rhs: BehaviourState) -> Bool {
     return true
 }
 
+func !=(lhs: BehaviourState, rhs: BehaviourState) -> Bool {
+    return !(lhs == rhs)
+}
 
 extension BehaviourState: NSCoding {
     override func encodeWithCoder(aCoder: NSCoder) {
@@ -76,7 +79,6 @@ extension BehaviourState: NSCoding {
         aCoder.encodeObject(_photo, forKey: "photo")
     }
 }
-
 
 extension BehaviourState {
     override func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
@@ -88,8 +90,8 @@ extension BehaviourState {
         var photoDictionary = NSMutableDictionary()
         if let photo = photo {
             photo.encodeRecursivelyWithDictionary(photoDictionary)
+            dictionary.setValue(photoDictionary, forKey: "photo")
         }
-        dictionary.setValue(photoDictionary, forKey: "photo")
         
         super.encodeRecursivelyWithDictionary(dictionary)
     }

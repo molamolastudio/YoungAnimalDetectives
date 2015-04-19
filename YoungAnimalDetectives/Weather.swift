@@ -37,12 +37,15 @@ class Weather: BiolifeModel {
         self._weather = aDecoder.decodeObjectForKey("weather") as! String
         super.init(coder: aDecoder)
     }
-
 }
 
 func ==(lhs: Weather, rhs: Weather) -> Bool {
     if lhs.weather != rhs.weather { return false }
     return true
+}
+
+func !=(lhs: Weather, rhs: Weather) -> Bool {
+    return !(lhs == rhs)
 }
 
 extension Weather: NSCoding {
@@ -54,6 +57,7 @@ extension Weather: NSCoding {
 
 extension Weather {
     override func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
-        encodeWithDictionary(dictionary)
+        dictionary.setValue(weather, forKey: "weather")
+        super.encodeRecursivelyWithDictionary(dictionary)
     }
 }

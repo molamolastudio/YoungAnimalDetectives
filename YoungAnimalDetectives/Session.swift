@@ -22,12 +22,14 @@ class Session: BiolifeModel {
     private var _typeValue: String
     private var _observations: [Observation]
     private var _individuals: [Individual]
+    private var _interval: Int?
     
     var type: SessionType { return SessionType(rawValue: _typeValue)! }
     var name: String { get { return _name } }
     var project: Project { get { return _project } }
     var observations: [Observation] { get { return _observations } }
     var individuals: [Individual] { get { return _individuals } }
+    var interval: Int? { get { return _interval } }
     
     init(project: Project, name: String, type: SessionType) {
         self._name = name
@@ -79,6 +81,54 @@ class Session: BiolifeModel {
         updateSession()
     }
     
+    func getTimestamps() -> [NSDate] {
+        var timestamps: [NSDate] = []
+        var duplicate: Bool
+        
+        for observation in observations {
+            duplicate = false
+            for timestamp in timestamps {
+                if observation.timestamp == timestamp {
+                    duplicate = true
+                    break
+                }
+            }
+            if !duplicate {
+                timestamps.append(observation.timestamp)
+            }
+        }
+        
+        var sortedTimestamps = sorted(timestamps, { (left: NSDate, right: NSDate) -> Bool in left.compare(right) == NSComparisonResult.OrderedAscending })
+        
+        return sortedTimestamps
+    }
+    
+    func getObservationsByTimestamp(timestamp: NSDate) -> [Observation] {
+        var selectedObs = [Observation]()
+        
+        for observation in observations {
+            if observation.timestamp == timestamp {
+                selectedObs.append(observation)
+            }
+        }
+        return selectedObs
+    }
+    
+    private func sortDates(date1: String, date2: String) -> Bool {
+        return date1 > date2
+    }
+    
+    func getAllObservationsForIndividual(individual: Individual) -> [Observation] {
+        var selectedObs = [Observation]()
+        
+        for observation in observations {
+            if observation.individual == individual {
+                selectedObs.append(observation)
+            }
+        }
+        return selectedObs
+    }
+    
     /******************Individual*******************/
     func addIndividuals(individuals: [Individual]) {
         self._individuals += individuals
@@ -105,10 +155,16 @@ class Session: BiolifeModel {
         }
         updateSession()
     }
+
+    func setInterval(interval: Int?) {
+        _interval = interval
+        updateSession()
+    }
     
     private func updateSession() {
         updateInfo(updatedBy: UserAuthService.sharedInstance.user, updatedAt: NSDate())
     }
+
 
     required init(coder aDecoder: NSCoder) {
         var enumerator: NSEnumerator
@@ -148,11 +204,14 @@ class Session: BiolifeModel {
 
 func ==(lhs: Session, rhs: Session) -> Bool {
     if lhs.project != rhs.project { return false }
-    if lhs.observations != rhs.observations { return false }
-    if lhs.individuals != rhs.individuals { return false }
+    if lhs.observations.count != rhs.observations.count { return false }
+    if lhs.individuals.count != rhs.individuals.count { return false }
     return true
 }
 
+func !=(lhs: Session, rhs: Session) -> Bool {
+    return !(lhs == rhs)
+}
 
 extension Session: NSCoding {
     override func encodeWithCoder(aCoder: NSCoder) {
@@ -164,7 +223,6 @@ extension Session: NSCoding {
         aCoder.encodeObject(_individuals, forKey: "individuals")
     }
 }
-
 
 extension Session {
     override func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
@@ -179,7 +237,7 @@ extension Session {
             observation.encodeRecursivelyWithDictionary(observationDictionary)
             observationsArray.append(observationDictionary)
         }
-        dictionary.setValue(observationsArray, forKey: "observations")
+        dictionary.setValue(observationsArray, forKey: "observation_set")
 
         var individualsArray = [NSDictionary]()
         for individual in individuals {

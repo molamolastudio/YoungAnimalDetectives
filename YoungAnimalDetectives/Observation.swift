@@ -16,7 +16,7 @@ class Observation: BiolifeModel {
     private var _information: String
     private var _timestamp: NSDate
     private var _photo: Photo?
-    private var _individual: Individual
+    private var _individual: Individual?
     private var _location: Location?
     private var _weather: Weather?
     
@@ -25,7 +25,7 @@ class Observation: BiolifeModel {
     var information: String { get { return _information } }
     var timestamp: NSDate { get { return _timestamp } }
     var photo: Photo? { get { return _photo } }
-    var individual: Individual { get { return _individual } }
+    var individual: Individual? { get { return _individual } }
     var location: Location? { get { return _location } }
     var weather: Weather? { get { return _weather } }
     
@@ -37,6 +37,16 @@ class Observation: BiolifeModel {
         self._weather = Weather()
         self._information = information
         self._individual = individual
+        super.init()
+    }
+    
+    init(session: Session, state: BehaviourState, timestamp: NSDate, information: String) {
+        self._session = session
+        self._state = state
+        self._timestamp = timestamp
+        self._location = Location()
+        self._weather = Weather()
+        self._information = information
         super.init()
     }
     
@@ -88,7 +98,7 @@ class Observation: BiolifeModel {
         self._timestamp = aDecoder.decodeObjectForKey("timestamp") as! NSDate
         self._location = aDecoder.decodeObjectForKey("location") as? Location
         self._weather = aDecoder.decodeObjectForKey("weather") as? Weather
-        self._individual = aDecoder.decodeObjectForKey("individual") as! Individual
+        self._individual = aDecoder.decodeObjectForKey("individual") as? Individual
         self._information = aDecoder.decodeObjectForKey("information") as! String
         super.init(coder: aDecoder)
     }
@@ -104,6 +114,10 @@ func ==(lhs: Observation, rhs: Observation) -> Bool {
         lhs.individual == rhs.individual &&
         lhs.location == rhs.location &&
         lhs.weather == rhs.weather
+}
+
+func !=(lhs: Observation, rhs: Observation) -> Bool {
+    return !(lhs == rhs)
 }
 
 
@@ -136,7 +150,7 @@ extension Observation {
         dictionary.setValue(photoDictionary, forKey: "photo")
         
         var individualDictionary = NSMutableDictionary()
-        individual.encodeRecursivelyWithDictionary(individualDictionary)
+        individual?.encodeRecursivelyWithDictionary(individualDictionary)
         dictionary.setValue(individualDictionary, forKey: "individual")
         
         var locationDictionary = NSMutableDictionary()

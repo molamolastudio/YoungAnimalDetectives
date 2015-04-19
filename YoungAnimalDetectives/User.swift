@@ -11,7 +11,7 @@ import Foundation
 class User: NSObject, NSCoding {
     class var ClassUrl: String { return "users" }
     
-    var id: Int = 1 // TESTING, Andhieka
+    var id: Int = 1
     var email: String
     var name: String
     
@@ -43,9 +43,14 @@ class User: NSObject, NSCoding {
         super.init()
     }
     
+    convenience init(dictionary: NSDictionary, recursive: Bool) {
+        self.init(dictionary: dictionary)
+    }
+
+    
     func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
         dictionary.setValue(id, forKey: "id")
         dictionary.setValue(email, forKey: "email")
-        dictionary.setValue(name, forKey: "name")
+        dictionary.setValue(name, forKey: "username")
     }
 }

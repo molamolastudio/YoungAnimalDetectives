@@ -12,6 +12,11 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     
     var addBSNum: Int?
     
+    @IBAction func ExportProjectButton(sender: AnyObject) {
+        
+        
+        
+    }
     @IBOutlet weak var observationTable: UITableView!
     @IBAction func addObservation(sender: AnyObject) {
         

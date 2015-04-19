@@ -44,7 +44,7 @@ class Ethogram: BiolifeModel, Storable {
     /************Ethogram********************/
     
     func updateName(name: String) {
-        Ethogram.deleteFromArchives(self.name)
+    //    Ethogram.deleteFromArchives(self.name)
         self._name = name
         updateEthogram()
     }
@@ -148,7 +148,7 @@ class Ethogram: BiolifeModel, Storable {
     }
     
     class func deleteFromArchives(identifier: String) -> Bool {
-        
+        let fileManager = NSFileManager.defaultManager()
         let dirs: [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         if (dirs == nil) {
@@ -159,25 +159,30 @@ class Ethogram: BiolifeModel, Storable {
         let dir = dirs![0]
         let path = dir.stringByAppendingPathComponent("Ethogram" + identifier)
         
-        // Delete the file and see if it was successful
-        var error: NSError?
-        let success :Bool = NSFileManager.defaultManager().removeItemAtPath(path, error: &error)
+        if fileManager.fileExistsAtPath(path) {
+            // Delete the file and see if it was successful
+            var error: NSError?
+            let success :Bool = NSFileManager.defaultManager().removeItemAtPath(path, error: &error)
         
-        if error != nil {
-            println(error)
+            if error != nil {
+                println(error)
+            }
+            return success
         }
-        
-        return success;
+        return false
     }
 }
 
 func ==(lhs: Ethogram, rhs: Ethogram) -> Bool {
     if lhs.name != rhs.name { return false }
     if lhs.information != rhs.information { return false }
-    if lhs.behaviourStates != rhs.behaviourStates { return false }
+    if lhs.behaviourStates.count != rhs.behaviourStates.count { return false }
     return true
 }
 
+func !=(lhs: Ethogram, rhs: Ethogram) -> Bool {
+    return !(lhs == rhs)
+}
 
 extension Ethogram: NSCoding {
     override func encodeWithCoder(aCoder: NSCoder) {
@@ -187,6 +192,7 @@ extension Ethogram: NSCoding {
         aCoder.encodeObject(_behaviourStates, forKey: "behaviourStates")
     }
 }
+
 
 extension Ethogram {
     override func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {

@@ -37,11 +37,16 @@ class Location: BiolifeModel {
         self._location = aDecoder.decodeObjectForKey("location") as! String
         super.init(coder: aDecoder)
     }
+
 }
 
 func ==(lhs: Location, rhs: Location) -> Bool {
     if lhs.location != rhs.location { return false }
     return true
+}
+
+func !=(lhs: Location, rhs: Location) -> Bool {
+    return !(lhs == rhs)
 }
 
 extension Location: NSCoding {
@@ -53,6 +58,7 @@ extension Location: NSCoding {
 
 extension Location {
     override func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
-        encodeWithDictionary(dictionary)
+        dictionary.setValue(location, forKey: "location")
+        super.encodeRecursivelyWithDictionary(dictionary)
     }
 }
