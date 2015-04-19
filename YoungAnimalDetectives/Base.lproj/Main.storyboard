@@ -316,7 +316,7 @@
                                     <rect key="frame" x="448" y="225" width="235" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="didTypeNickname:" destination="YXa-gV-97x" eventType="editingDidEnd" id="hfU-Zd-eMX"/>
+                                    <action selector="didTypeNickname:" destination="YXa-gV-97x" eventType="editingDidEndOnExit" id="TtF-3Q-jpA"/>
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Type:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89u-7U-SsP" userLabel="Type">
@@ -336,7 +336,7 @@
                                     <rect key="frame" x="448" y="379" width="235" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="didTypeType:" destination="YXa-gV-97x" eventType="editingDidEnd" id="3AK-gU-jZd"/>
+                                    <action selector="didTypeType:" destination="YXa-gV-97x" eventType="editingDidEndOnExit" id="nCN-On-Leq"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-Qq-1Kz">
