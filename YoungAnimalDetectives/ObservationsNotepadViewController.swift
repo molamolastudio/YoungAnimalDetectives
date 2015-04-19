@@ -16,7 +16,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     @IBAction func addObservation(sender: AnyObject) {
         
         //Create the AlertController
-        let actionSheetController: UIAlertController = UIAlertController(title: "Choose the behaviour state", message: "Swiftly Now! Choose an option!", preferredStyle: .ActionSheet)
+        let actionSheetController: UIAlertController = UIAlertController(title: Constants.Words.OBS_FORM_ADD_TITLE, message: Constants.Words.EMPTY_STRING, preferredStyle: .ActionSheet)
         
         let movingAction = UIAlertAction(title: StandardEthogram.getEthogram().behaviourStates[0].name, style: .Default) { (_) in
             self.addBSNum = 0
@@ -45,7 +45,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         actionSheetController.addAction(restingAction)
         actionSheetController.addAction(notVisibleAction)
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        let cancelAction = UIAlertAction(title: Constants.Words.OBS_FORM_CANCEL, style: .Cancel) { (_) in }
         
         actionSheetController.addAction(cancelAction)
         
@@ -57,16 +57,16 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     }
     
     func createInformationPopUp(sender: AnyObject) {
-        let actionSheetController: UIAlertController = UIAlertController(title: "Add information", message: "", preferredStyle: .Alert)
+        let actionSheetController: UIAlertController = UIAlertController(title: Constants.Words.OBS_FORM_TITLE, message: "", preferredStyle: .Alert)
         
-        let infoAction = UIAlertAction(title: "Done", style: .Default) { (_) in
+        let infoAction = UIAlertAction(title: Constants.Words.OBS_FORM_DONE, style: .Default) { (_) in
             let infoField = actionSheetController.textFields![0] as! UITextField
             if let nick = SharedData.sharedInstance.nickname {
                 let individual = Individual(label: nick)
                 
                 if let project = SharedData.sharedInstance.project {
                     
-                    var session = Session(project: SharedData.sharedInstance.project!, name: "Unlimited Session", type: SessionType.Focal)
+                    var session = Session(project: SharedData.sharedInstance.project!, name: Constants.Words.SESSION_UNLIMITED, type: SessionType.Focal)
                     
                     if project.sessions.count == 0 {
                         project.addSessions([session])
@@ -88,13 +88,13 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         infoAction.enabled = false
         
         actionSheetController.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = "More information"
+            textField.placeholder = Constants.Words.PLACEHOLDER_INFO
             
             NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object: textField, queue: NSOperationQueue.mainQueue()) { (notification) in
                 infoAction.enabled = textField.text != ""
             }
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        let cancelAction = UIAlertAction(title: Constants.Words.OBS_FORM_CANCEL, style: .Cancel) { (_) in }
         actionSheetController.addAction(infoAction)
         actionSheetController.addAction(cancelAction)
         
@@ -153,14 +153,13 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         behaviourLabel.text = observation.state.name
         infoLabel.text = observation.information
         
-        println("Accessed")
-        
         return cell
     }
     
     // This function sets the height of the observation row
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(86)
+        let rowHeight = CGFloat(86)
+        return rowHeight
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

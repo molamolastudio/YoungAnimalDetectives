@@ -43,4 +43,20 @@ struct Constants {
     struct Table {
         static let OBSERVATION_CELL_ID = "ObservationTableCell"
     }
+    
+    struct Words {
+        static let OBS_FORM_DONE = "Done"
+        static let SESSION_UNLIMITED = "Unlimited"
+        static let PLACEHOLDER_INFO = "More information"
+        static let EMPTY_STRING = ""
+        static let OBS_FORM_TITLE = "Add information"
+        static let OBS_FORM_CANCEL = "Cancel"
+        static let OBS_FORM_ADD_TITLE = "Choose the behaviour state"
+    }
+    
+    struct StorageKeys {
+        static let PROJECT = "project"
+        static let NICKNAME = "nickname"
+        static let TYPE = "type"
+    }
 }

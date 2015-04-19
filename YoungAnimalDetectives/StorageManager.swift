@@ -16,8 +16,6 @@ class StorageManager {
         
         let identifier = SharedData.sharedInstance.currentProject
         
-        println("saving" + identifier!)
-        
         let project = SharedData.sharedInstance.project
         let nickname = SharedData.sharedInstance.nickname
         let type = SharedData.sharedInstance.type
@@ -28,9 +26,9 @@ class StorageManager {
             
             let data = NSMutableData();
             let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
-            archiver.encodeObject(project, forKey: "project")
-            archiver.encodeObject(nickname, forKey: "nickname")
-            archiver.encodeObject(type, forKey: "type")
+            archiver.encodeObject(project, forKey: Constants.StorageKeys.PROJECT)
+            archiver.encodeObject(nickname, forKey: Constants.StorageKeys.NICKNAME)
+            archiver.encodeObject(type, forKey: Constants.StorageKeys.TYPE)
             archiver.finishEncoding()
             data.writeToFile(path, atomically: true)
         }
@@ -56,14 +54,14 @@ class StorageManager {
         }
         
         let archiver = NSKeyedUnarchiver(forReadingWithData: data!)
-        SharedData.sharedInstance.project = archiver.decodeObjectForKey("project") as! Project?
+        SharedData.sharedInstance.project = archiver.decodeObjectForKey(Constants.StorageKeys.PROJECT) as! Project?
         if SharedData.sharedInstance.project == nil {
             let ethogram: Ethogram = StandardEthogram.getEthogram()
             SharedData.sharedInstance.project = Project(name: identifier!, ethogram: ethogram)
         }
         
-        SharedData.sharedInstance.nickname = archiver.decodeObjectForKey("nickname") as! String?
-        SharedData.sharedInstance.type = archiver.decodeObjectForKey("type") as! String?
+        SharedData.sharedInstance.nickname = archiver.decodeObjectForKey(Constants.StorageKeys.NICKNAME) as! String?
+        SharedData.sharedInstance.type = archiver.decodeObjectForKey(Constants.StorageKeys.TYPE) as! String?
     }
     
     class func deleteProjectFromArchives(identifier: String) -> Bool {
