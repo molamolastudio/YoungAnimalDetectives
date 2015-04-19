@@ -167,7 +167,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
+        return true
     }
     
     // This function deletes a game file
@@ -176,8 +176,10 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         if editingStyle == UITableViewCellEditingStyle.Delete {
             if let project = SharedData.sharedInstance.project {
                 project.sessions[0].removeObservations([indexPath.row])
+                StorageManager.saveProjectToArchives()
             }
         }
+        tableView.reloadData()
     }
     
     // This function sets the action after selecting a game file.
