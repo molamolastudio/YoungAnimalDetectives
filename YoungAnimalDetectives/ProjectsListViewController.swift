@@ -38,9 +38,5 @@ class ProjectsListViewController: UIViewController {
             SharedData.sharedInstance.currentProject = Constants.Project.TITLE_RABBIT
             StorageManager.loadProjectFromArchives()
         }
-        
-        println(segue.identifier)
-        println(SharedData.sharedInstance.nickname)
-        println(SharedData.sharedInstance.type)
     }
 }

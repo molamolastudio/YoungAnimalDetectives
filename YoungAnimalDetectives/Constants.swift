@@ -55,6 +55,7 @@ struct Constants {
         static let OBS_FORM_ADD_TITLE = "Choose the behaviour state"
         static let OBS_FORM_RESET_TITLE = "Reset project"
         static let OBS_FORM_RESET_WARNING = "Once the project is deleted, it cannot be recovered. Do you want to proceed with reset?"
+        static let PROJ_ALERT_DESTROY = "Destroy"
     }
     
     struct StorageKeys {

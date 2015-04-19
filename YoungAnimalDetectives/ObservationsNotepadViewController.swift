@@ -119,11 +119,6 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
 
         observationTable.delegate = self
         observationTable.dataSource = self
-        
-        println(SharedData.sharedInstance.project?.name)
-        println(SharedData.sharedInstance.nickname)
-        println(SharedData.sharedInstance.project?.sessions.count)
-    
     }
     
     override func didReceiveMemoryWarning() {

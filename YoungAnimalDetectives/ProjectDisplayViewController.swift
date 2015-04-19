@@ -52,7 +52,7 @@ class ProjectDisplayViewController: UIViewController {
         //Create the AlertController
         let actionSheetController: UIAlertController = UIAlertController(title: Constants.Words.OBS_FORM_RESET_TITLE, message: Constants.Words.OBS_FORM_RESET_WARNING, preferredStyle: .ActionSheet)
         
-        let destroyAction = UIAlertAction(title: "Destroy", style: .Destructive) { (action) in
+        let destroyAction = UIAlertAction(title: Constants.Words.PROJ_ALERT_DESTROY, style: .Destructive) { (action) in
             SharedData.sharedInstance.nickname = nil
             SharedData.sharedInstance.type = nil
             
@@ -65,11 +65,11 @@ class ProjectDisplayViewController: UIViewController {
             
             self.nicknameField.hidden = false
             self.individualNickname.hidden = true
-            self.nicknameField.text = ""
+            self.nicknameField.text = Constants.Words.EMPTY_STRING
             
             self.typeField.hidden = false
             self.individualType.hidden = true
-            self.typeField.text = ""
+            self.typeField.text = Constants.Words.EMPTY_STRING
         }
         let cancelAction = UIAlertAction(title: Constants.Words.OBS_FORM_CANCEL, style: .Cancel) { (_) in }
         
@@ -87,7 +87,6 @@ class ProjectDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        println(SharedData.sharedInstance.currentProject)
         
         let FONT_SIZE_INPUT = CGFloat(40)
         let FONT_SIZE_TITLE = CGFloat(35)
