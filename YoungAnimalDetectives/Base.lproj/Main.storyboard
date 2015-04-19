@@ -366,6 +366,19 @@
                                     <action selector="goToObservations:" destination="YXa-gV-97x" eventType="touchUpInside" id="wzI-hn-pKl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9Q-w0-urI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset project">
+                                    <color key="titleColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="597" y="454" width="108" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetProject:" destination="YXa-gV-97x" eventType="touchUpInside" id="FBg-y5-NdC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -382,6 +395,7 @@
                                 <exclude reference="2Lh-Qq-1Kz"/>
                                 <exclude reference="yXZ-vB-CID"/>
                                 <exclude reference="kIi-C9-TxE"/>
+                                <exclude reference="y9Q-w0-urI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -398,6 +412,7 @@
                                 <include reference="2Lh-Qq-1Kz"/>
                                 <include reference="yXZ-vB-CID"/>
                                 <include reference="kIi-C9-TxE"/>
+                                <include reference="y9Q-w0-urI"/>
                             </mask>
                         </variation>
                     </view>
@@ -623,6 +638,22 @@
             </objects>
             <point key="canvasLocation" x="1653.75" y="639.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="urC-p7-O0T">
+            <objects>
+                <viewController id="wP0-2n-Zjv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hc2-P3-uCg"/>
+                        <viewControllerLayoutGuide type="bottom" id="8bt-zB-ZcL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lkC-7m-rLo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wu3-4y-Hpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="addbutton.png" width="320" height="320"/>
@@ -642,8 +673,8 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Up-wU-osm"/>
         <segue reference="x7r-XW-f4M"/>
         <segue reference="mFa-eD-dhC"/>
+        <segue reference="0ba-F4-XbW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -56,7 +56,6 @@ class StorageManager {
         let archiver = NSKeyedUnarchiver(forReadingWithData: data!)
         SharedData.sharedInstance.project = archiver.decodeObjectForKey(Constants.StorageKeys.PROJECT) as? Project
         if SharedData.sharedInstance.project == nil {
-            println("entered")
             
             let ethogram: Ethogram = StandardEthogram.getEthogram()
             SharedData.sharedInstance.project = Project(name: identifier!, ethogram: ethogram)
@@ -64,7 +63,6 @@ class StorageManager {
             let session = Session(project: SharedData.sharedInstance.project!, name: Constants.Words.SESSION_UNLIMITED, type: SessionType.Focal)
             SharedData.sharedInstance.project!.addSessions([session])
         }
-        println("loading \(SharedData.sharedInstance.project?.sessions.count)")
         
         SharedData.sharedInstance.nickname = archiver.decodeObjectForKey(Constants.StorageKeys.NICKNAME) as! String?
         SharedData.sharedInstance.type = archiver.decodeObjectForKey(Constants.StorageKeys.TYPE) as! String?
@@ -72,6 +70,7 @@ class StorageManager {
     
     class func deleteProjectFromArchives(identifier: String) -> Bool {
         
+        let fileManager = NSFileManager.defaultManager()
         let dirs: [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         if (dirs == nil) {
@@ -82,14 +81,16 @@ class StorageManager {
         let dir = dirs![0]
         let path = dir.stringByAppendingPathComponent(identifier)
         
-        // Delete the file and see if it was successful
-        var error: NSError?
-        let success :Bool = NSFileManager.defaultManager().removeItemAtPath(path, error: &error)
+        if fileManager.fileExistsAtPath(path) {
+            // Delete the file and see if it was successful
+            var error: NSError?
+            let success :Bool = NSFileManager.defaultManager().removeItemAtPath(path, error: &error)
         
-        if error != nil {
-            println(error)
+            if error != nil {
+                println(error)
+            }
+            return success;
         }
-        
-        return success;
+        return false
     }
 }

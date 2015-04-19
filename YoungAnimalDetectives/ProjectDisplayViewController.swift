@@ -48,6 +48,42 @@ class ProjectDisplayViewController: UIViewController {
     @IBOutlet weak var individualNickname: UITextView!
     @IBOutlet weak var individualType: UITextView!
     
+    @IBAction func resetProject(sender: AnyObject) {
+        //Create the AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: Constants.Words.OBS_FORM_RESET_TITLE, message: Constants.Words.OBS_FORM_RESET_WARNING, preferredStyle: .ActionSheet)
+        
+        let destroyAction = UIAlertAction(title: "Destroy", style: .Destructive) { (action) in
+            SharedData.sharedInstance.nickname = nil
+            SharedData.sharedInstance.type = nil
+            
+            let ethogram: Ethogram = StandardEthogram.getEthogram()
+            SharedData.sharedInstance.project = Project(name: SharedData.sharedInstance.currentProject!, ethogram: ethogram)
+            let session = Session(project: SharedData.sharedInstance.project!, name: Constants.Words.SESSION_UNLIMITED, type: SessionType.Focal)
+            SharedData.sharedInstance.project!.addSessions([session])
+            
+            StorageManager.saveProjectToArchives()
+            
+            self.nicknameField.hidden = false
+            self.individualNickname.hidden = true
+            self.nicknameField.text = ""
+            
+            self.typeField.hidden = false
+            self.individualType.hidden = true
+            self.typeField.text = ""
+        }
+        let cancelAction = UIAlertAction(title: Constants.Words.OBS_FORM_CANCEL, style: .Cancel) { (_) in }
+        
+        actionSheetController.addAction(destroyAction)
+        actionSheetController.addAction(cancelAction)
+        
+        //We need to provide a popover sourceView when using it on iPad
+        actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
