@@ -26,16 +26,16 @@ class ProjectsListViewController: UIViewController {
         SharedData.sharedInstance.project = nil
         
         if segue.identifier == Constants.Segue.DOG {
-            SharedData.sharedInstance.currentProject = Constants.Project.DOG
+            SharedData.sharedInstance.currentProject = Constants.Project.TITLE_DOG
             StorageManager.loadProjectFromArchives()
         } else if segue.identifier == Constants.Segue.CAT {
-            SharedData.sharedInstance.currentProject = Constants.Project.CAT
+            SharedData.sharedInstance.currentProject = Constants.Project.TITLE_CAT
             StorageManager.loadProjectFromArchives()
         } else if segue.identifier == Constants.Segue.GUINEAPIG {
-            SharedData.sharedInstance.currentProject = Constants.Project.GUINEAPIG
+            SharedData.sharedInstance.currentProject = Constants.Project.TITLE_GUINEAPIG
             StorageManager.loadProjectFromArchives()
         } else if segue.identifier == Constants.Segue.RABBIT {
-            SharedData.sharedInstance.currentProject = Constants.Project.RABBIT
+            SharedData.sharedInstance.currentProject = Constants.Project.TITLE_RABBIT
             StorageManager.loadProjectFromArchives()
         }
         

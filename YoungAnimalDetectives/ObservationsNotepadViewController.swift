@@ -12,10 +12,10 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     
     var addBSNum: Int?
     
-    @IBAction func ExportProjectButton(sender: AnyObject) {
-        
-        
-        
+    @IBOutlet weak var exportProjectButton: UIButton!
+    @IBAction func exportProject(sender: AnyObject) {
+        let exportProjService = ExportObservationsService(project: SharedData.sharedInstance.project!)
+        exportProjService.openInOtherApps(exportProjectButton)
     }
     @IBOutlet weak var observationTable: UITableView!
     @IBAction func addObservation(sender: AnyObject) {

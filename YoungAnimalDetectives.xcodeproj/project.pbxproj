@@ -27,8 +27,9 @@
 		ACBE5D5F1AE39C1A0026235F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D541AE39C1A0026235F /* Photo.swift */; };
 		ACBE5D611AE39C410026235F /* BiolifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D601AE39C410026235F /* BiolifeModel.swift */; };
 		ACBE5D651AE39D0A0026235F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D641AE39D0A0026235F /* User.swift */; };
-		ACBE5D811AE3A19B0026235F /* BLTProjectDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D7F1AE3A19B0026235F /* BLTProjectDeserializer.swift */; };
 		ACBE5D821AE3A19B0026235F /* BLTProjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D801AE3A19B0026235F /* BLTProjectSerializer.swift */; };
+		ACBE5D851AE3A56A0026235F /* ExportProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D841AE3A56A0026235F /* ExportProjectService.swift */; };
+		ACBE5D871AE3B2B30026235F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBE5D861AE3B2B30026235F /* icon.png */; };
 		ACDE1FA51AE0CE8D001A4684 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */; };
 		ACDE1FA71AE0D109001A4684 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA61AE0D109001A4684 /* StorageManager.swift */; };
 		ACDE1FAD1AE1DFCA001A4684 /* StandardEthogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */; };
@@ -106,8 +107,9 @@
 		ACBE5D601AE39C410026235F /* BiolifeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiolifeModel.swift; sourceTree = "<group>"; };
 		ACBE5D641AE39D0A0026235F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ACBE5D791AE39EBD0026235F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ACBE5D7F1AE3A19B0026235F /* BLTProjectDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTProjectDeserializer.swift; sourceTree = "<group>"; };
 		ACBE5D801AE3A19B0026235F /* BLTProjectSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTProjectSerializer.swift; sourceTree = "<group>"; };
+		ACBE5D841AE3A56A0026235F /* ExportProjectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportProjectService.swift; sourceTree = "<group>"; };
+		ACBE5D861AE3B2B30026235F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		ACDE1FA61AE0D109001A4684 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardEthogram.swift; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACBE5D831AE3A5220026235F /* BLTService */ = {
+			isa = PBXGroup;
+			children = (
+				ACBE5D841AE3A56A0026235F /* ExportProjectService.swift */,
+			);
+			name = BLTService;
+			sourceTree = "<group>";
+		};
 		ACFCB87A1ADE59550041E7D5 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		ACFCB8AF1ADF2DD70041E7D5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ACBE5D861AE3B2B30026235F /* icon.png */,
 				ACFCB8B21ADF2E920041E7D5 /* cat.png */,
 				ACFCB8B31ADF2E920041E7D5 /* clipboardbg.png */,
 				ACFCB8B41ADF2E920041E7D5 /* background.png */,
@@ -283,7 +294,8 @@
 		ACFCB8DF1ADF910A0041E7D5 /* BLTModelLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				ACFCB9221ADFAC160041E7D5 /* Serialization */,
+				ACBE5D831AE3A5220026235F /* BLTService */,
+				ACFCB9221ADFAC160041E7D5 /* BLTSerialization */,
 				ACFCB90B1ADFA9050041E7D5 /* BLTProtocols */,
 				ACFCB8F81ADF92B30041E7D5 /* BLTDataModels */,
 			);
@@ -330,13 +342,12 @@
 			name = BLTProtocols;
 			sourceTree = "<group>";
 		};
-		ACFCB9221ADFAC160041E7D5 /* Serialization */ = {
+		ACFCB9221ADFAC160041E7D5 /* BLTSerialization */ = {
 			isa = PBXGroup;
 			children = (
-				ACBE5D7F1AE3A19B0026235F /* BLTProjectDeserializer.swift */,
 				ACBE5D801AE3A19B0026235F /* BLTProjectSerializer.swift */,
 			);
-			name = Serialization;
+			name = BLTSerialization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 				ACFCB8C91ADF6EA90041E7D5 /* forward.png in Resources */,
 				ACFCB8DC1ADF6EB10041E7D5 /* squarepup.png in Resources */,
 				ACFCB8BF1ADF2E920041E7D5 /* pig.png in Resources */,
+				ACBE5D871AE3B2B30026235F /* icon.png in Resources */,
 				ACB479EE1AE0C00000F61C53 /* table.png in Resources */,
 				ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */,
 				ACFCB8BC1ADF2E920041E7D5 /* clipboardbg.png in Resources */,
@@ -478,6 +490,7 @@
 				ACBE5D571AE39C1A0026235F /* BehaviourState.swift in Sources */,
 				ACDE1FA51AE0CE8D001A4684 /* SharedData.swift in Sources */,
 				ACFCB8FE1ADF98F80041E7D5 /* UserAuthService.swift in Sources */,
+				ACBE5D851AE3A56A0026235F /* ExportProjectService.swift in Sources */,
 				ACFCB8AE1ADE5BEA0041E7D5 /* ObservationsNotepadViewController.swift in Sources */,
 				ACBE5D5F1AE39C1A0026235F /* Photo.swift in Sources */,
 				ACFCB91D1ADFA9330041E7D5 /* BLTSessionProtocol.swift in Sources */,
@@ -495,7 +508,6 @@
 				ACBE5D5D1AE39C1A0026235F /* Weather.swift in Sources */,
 				ACFCB91A1ADFA9330041E7D5 /* BLTObservationProtocol.swift in Sources */,
 				ACFCB9091ADFA3270041E7D5 /* NSDate+Encoding.swift in Sources */,
-				ACBE5D811AE3A19B0026235F /* BLTProjectDeserializer.swift in Sources */,
 				ACFCB9171ADFA9330041E7D5 /* BLTEthogramProtocol.swift in Sources */,
 				ACBE5D5B1AE39C1A0026235F /* Individual.swift in Sources */,
 				ACFCB8891ADE59550041E7D5 /* AppDelegate.swift in Sources */,

@@ -60,16 +60,16 @@ class ProjectDisplayViewController: UIViewController {
         
         if let project = SharedData.sharedInstance.currentProject {
             switch (project) {
-            case Constants.Project.DOG:
+            case Constants.Project.TITLE_DOG:
                 animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_DOG)
                 projectTitle.text = Constants.Project.TITLE_DOG
-            case Constants.Project.CAT:
+            case Constants.Project.TITLE_CAT:
                 animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_CAT)
                 projectTitle.text = Constants.Project.TITLE_CAT
-            case Constants.Project.GUINEAPIG:
+            case Constants.Project.TITLE_GUINEAPIG:
                 animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_GUINEAPIG)
                 projectTitle.text = Constants.Project.TITLE_GUINEAPIG
-            case Constants.Project.RABBIT:
+            case Constants.Project.TITLE_RABBIT:
                 animalProfileImage.image = UIImage(named: Constants.Image.SQUARE_RABBIT)
                 projectTitle.text = Constants.Project.TITLE_RABBIT
             default:
