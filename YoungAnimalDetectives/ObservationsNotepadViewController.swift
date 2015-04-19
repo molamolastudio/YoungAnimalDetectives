@@ -8,37 +8,110 @@
 
 import UIKit
 
-class ObservationsNotepadViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ObservationsNotepadViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
+    
+    var addBSNum: Int?
     
     @IBOutlet weak var observationTable: UITableView!
+    @IBAction func addObservation(sender: AnyObject) {
+        
+        //Create the AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: "Choose the behaviour state", message: "Swiftly Now! Choose an option!", preferredStyle: .ActionSheet)
+        
+        let movingAction = UIAlertAction(title: StandardEthogram.getEthogram().behaviourStates[0].name, style: .Default) { (_) in
+            self.addBSNum = 0
+            self.createInformationPopUp(self)
+        }
+        let groomingAction = UIAlertAction(title: StandardEthogram.getEthogram().behaviourStates[1].name, style: .Default) { (_) in
+            self.addBSNum = 1
+            self.createInformationPopUp(self)
+        }
+        let ingestingAction = UIAlertAction(title: StandardEthogram.getEthogram().behaviourStates[2].name, style: .Default) { (_) in
+            self.addBSNum = 2
+            self.createInformationPopUp(self)
+        }
+        let restingAction = UIAlertAction(title: StandardEthogram.getEthogram().behaviourStates[3].name, style: .Default) { (_) in
+            self.addBSNum = 3
+            self.createInformationPopUp(self)
+        }
+        let notVisibleAction = UIAlertAction(title: StandardEthogram.getEthogram().behaviourStates[4].name, style: .Default) { (_) in
+            self.addBSNum = 4
+            self.createInformationPopUp(self)
+        }
+        
+        actionSheetController.addAction(movingAction)
+        actionSheetController.addAction(groomingAction)
+        actionSheetController.addAction(ingestingAction)
+        actionSheetController.addAction(restingAction)
+        actionSheetController.addAction(notVisibleAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        
+        actionSheetController.addAction(cancelAction)
+        
+        //We need to provide a popover sourceView when using it on iPad
+        actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    
+    func createInformationPopUp(sender: AnyObject) {
+        let actionSheetController: UIAlertController = UIAlertController(title: "Add information", message: "", preferredStyle: .Alert)
+        
+        let infoAction = UIAlertAction(title: "Done", style: .Default) { (_) in
+            let infoField = actionSheetController.textFields![0] as! UITextField
+            if let nick = SharedData.sharedInstance.nickname {
+                let individual = Individual(label: nick)
+                
+                if let project = SharedData.sharedInstance.project {
+                    
+                    var session = Session(project: SharedData.sharedInstance.project!, name: "Unlimited Session", type: SessionType.Focal)
+                    
+                    if project.sessions.count == 0 {
+                        project.addSessions([session])
+                    } else {
+                        session = SharedData.sharedInstance.project!.sessions[0]
+                    }
+                    
+                    let individual = Individual(label: SharedData.sharedInstance.nickname!)
+                    let ethogram: Ethogram = StandardEthogram.getEthogram()
+                    var observation = Observation(session: session, individual: individual, state: ethogram.behaviourStates[self.addBSNum!], timestamp: NSDate(), information: infoField.text)
+                    session.addObservation([observation])
+                    
+                    StorageManager.saveProjectToArchives()
+                    self.observationTable.reloadData()
+                }
+            }
+        }
+        
+        infoAction.enabled = false
+        
+        actionSheetController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "More information"
+            
+            NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object: textField, queue: NSOperationQueue.mainQueue()) { (notification) in
+                infoAction.enabled = textField.text != ""
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        actionSheetController.addAction(infoAction)
+        actionSheetController.addAction(cancelAction)
+        
+        //We need to provide a popover sourceView when using it on iPad
+        actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var addObservationBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        if let nick = SharedData.sharedInstance.nickname {
-            let individual = Individual(label: nick)
-            
-            if let project = SharedData.sharedInstance.project {
-                
-                var session: Session
-                if project.sessions.count == 0 {
-                    session = Session(project: SharedData.sharedInstance.project!, name: "Unlimited Session", type: SessionType.Focal)
-                    project.addSessions([session])
-                } else {
-                    session = SharedData.sharedInstance.project!.sessions[0]
-                }
-                
-                let ethogram: Ethogram = StandardEthogram.getEthogram()
-                var observation = Observation(session: session, individual: individual, state: ethogram.behaviourStates[0], timestamp: NSDate(), information: "")
-                session.addObservation([observation])
-                
-                StorageManager.saveProjectToArchives()
-            }
-        }
-        
-        
         observationTable.delegate = self
         observationTable.dataSource = self
     
