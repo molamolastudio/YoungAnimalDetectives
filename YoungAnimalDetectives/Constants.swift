@@ -15,6 +15,7 @@ struct Constants {
         static let CAT = "segue_cat"
         static let GUINEAPIG = "segue_guineapig"
         static let RABBIT = "segue_rabbit"
+        static let GO_OBSERVATIONS = "goToObservations"
     }
     
     struct Project {

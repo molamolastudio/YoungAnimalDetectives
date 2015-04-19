@@ -248,7 +248,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="4BT-pF-gdH">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="-20" y="0.0" width="807" height="1024"/>
+                                    <rect key="frame" x="-21" y="0.0" width="807" height="1024"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-5f-0HU" userLabel="Home">
@@ -363,7 +363,7 @@
                                     <rect key="frame" x="618" y="877" width="80" height="80"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="kuA-u6-sdr" kind="show" id="cd6-GK-YOG"/>
+                                    <action selector="goToObservations:" destination="YXa-gV-97x" eventType="touchUpInside" id="wzI-hn-pKl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -410,6 +410,7 @@
                         <outlet property="nicknameField" destination="efm-6o-Qgr" id="MMQ-hs-e6K"/>
                         <outlet property="projectTitle" destination="fyu-uG-exL" id="ztG-3P-PzL"/>
                         <outlet property="typeField" destination="NgN-Mw-xmD" id="Pdh-I3-mAi"/>
+                        <segue destination="kuA-u6-sdr" kind="show" identifier="goToObservations" id="KAb-Ks-IyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-XM-whw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -625,8 +626,8 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4Up-wU-osm"/>
         <segue reference="x7r-XW-f4M"/>
-        <segue reference="GJK-Kd-qPR"/>
-        <segue reference="ZCe-KI-rfU"/>
+        <segue reference="mFa-eD-dhC"/>
     </inferredMetricsTieBreakers>
 </document>

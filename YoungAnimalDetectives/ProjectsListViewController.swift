@@ -39,6 +39,7 @@ class ProjectsListViewController: UIViewController {
             StorageManager.loadProjectFromArchives()
         }
         
+        println(segue.identifier)
         println(SharedData.sharedInstance.nickname)
         println(SharedData.sharedInstance.type)
     }

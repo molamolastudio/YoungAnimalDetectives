@@ -13,6 +13,23 @@ class ProjectDisplayViewController: UIViewController {
     @IBOutlet weak var animalProfileImage: UIImageView!
     @IBOutlet weak var projectTitle: UITextView!
 
+    @IBAction func goToObservations(sender: AnyObject) {
+        // check whether nickname and type is filled in
+        if SharedData.sharedInstance.nickname == nil || SharedData.sharedInstance.type == nil {
+            let actionSheetController = UIAlertController(title: "Missing information", message: "Please key in nickname and type", preferredStyle: .Alert)
+        
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+            actionSheetController.addAction(OKAction)
+        
+            //We need to provide a popover sourceView when using it on iPad
+            actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
+        
+            //Present the AlertController
+            self.presentViewController(actionSheetController, animated: true, completion: nil)
+        } else {
+            performSegueWithIdentifier(Constants.Segue.GO_OBSERVATIONS, sender: self)
+        }
+    }
     
     @IBOutlet weak var nicknameField: UITextField!
     @IBAction func didTypeNickname(sender: AnyObject) {
