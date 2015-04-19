@@ -58,6 +58,9 @@ class StorageManager {
         if SharedData.sharedInstance.project == nil {
             let ethogram: Ethogram = StandardEthogram.getEthogram()
             SharedData.sharedInstance.project = Project(name: identifier!, ethogram: ethogram)
+            
+            let session = Session(project: SharedData.sharedInstance.project!, name: Constants.Words.SESSION_UNLIMITED, type: SessionType.Focal)
+            SharedData.sharedInstance.project!.addSessions([session])
         }
         
         SharedData.sharedInstance.nickname = archiver.decodeObjectForKey(Constants.StorageKeys.NICKNAME) as! String?
