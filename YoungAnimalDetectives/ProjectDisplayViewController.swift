@@ -27,6 +27,7 @@ class ProjectDisplayViewController: UIViewController {
             //Present the AlertController
             self.presentViewController(actionSheetController, animated: true, completion: nil)
         } else {
+            StorageManager.loadProjectFromArchives()
             performSegueWithIdentifier(Constants.Segue.GO_OBSERVATIONS, sender: self)
         }
     }
@@ -75,8 +76,6 @@ class ProjectDisplayViewController: UIViewController {
                 break
             }
         }
-        
-        StorageManager.loadProjectFromArchives()
         
         projectTitle.font = UIFont(descriptor: UIFontDescriptor(name: Constants.Font.CHALKDUSTER, size: 0), size: FONT_SIZE_TITLE)
         projectTitle.textColor = UIColor(white: FONT_WHITE_COLOR, alpha: FONT_WHITE_ALPHA)
