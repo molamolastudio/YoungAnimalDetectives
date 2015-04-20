@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC530C641AE4E3E7008E1A17 /* juniorlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C631AE4E3E7008E1A17 /* juniorlogo.png */; };
+		AC530C661AE4EA42008E1A17 /* junioricon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C651AE4EA42008E1A17 /* junioricon.png */; };
 		ACB479DA1AE07F1B00F61C53 /* circlecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D61AE07F1B00F61C53 /* circlecat.png */; };
 		ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D71AE07F1B00F61C53 /* circlepig.png */; };
 		ACB479DC1AE07F1B00F61C53 /* circlepup.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D81AE07F1B00F61C53 /* circlepup.png */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		AC530C631AE4E3E7008E1A17 /* juniorlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juniorlogo.png; sourceTree = "<group>"; };
+		AC530C651AE4EA42008E1A17 /* junioricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = junioricon.png; sourceTree = "<group>"; };
 		ACB479D61AE07F1B00F61C53 /* circlecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlecat.png; sourceTree = "<group>"; };
 		ACB479D71AE07F1B00F61C53 /* circlepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepig.png; sourceTree = "<group>"; };
 		ACB479D81AE07F1B00F61C53 /* circlepup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepup.png; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				ACB479DF1AE08D7C00F61C53 /* notepadbutton.png */,
 				ACFCB8D11ADF6EB10041E7D5 /* squarepig.png */,
 				ACFCB8D21ADF6EB10041E7D5 /* squarepup.png */,
+				AC530C651AE4EA42008E1A17 /* junioricon.png */,
 				ACB479D61AE07F1B00F61C53 /* circlecat.png */,
 				ACB479D71AE07F1B00F61C53 /* circlepig.png */,
 				ACB479D81AE07F1B00F61C53 /* circlepup.png */,
@@ -449,6 +452,7 @@
 				ACFCB8931ADE59550041E7D5 /* LaunchScreen.xib in Resources */,
 				ACFCB8BD1ADF2E920041E7D5 /* background.png in Resources */,
 				ACB479E11AE08D7C00F61C53 /* notepadbutton.png in Resources */,
+				AC530C661AE4EA42008E1A17 /* junioricon.png in Resources */,
 				ACFCB8C31ADF2E920041E7D5 /* animal-orange.png in Resources */,
 				ACFCB8C71ADF35370041E7D5 /* home.png in Resources */,
 				ACFCB8C11ADF2E920041E7D5 /* detectives.png in Resources */,

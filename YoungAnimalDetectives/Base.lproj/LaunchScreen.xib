@@ -34,6 +34,12 @@
                         <rect key="frame" x="38" y="453" width="693" height="160"/>
                     </variation>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="junioricon.png" translatesAutoresizingMaskIntoConstraints="NO" id="iNz-Yg-5kY">
+                    <rect key="frame" x="75" y="616" width="399" height="381"/>
+                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="75" y="616" width="399" height="381"/>
+                    </variation>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -43,6 +49,7 @@
         <image name="animal-orange.png" width="950" height="263"/>
         <image name="background.png" width="1024" height="768"/>
         <image name="detectives.png" width="950" height="182"/>
+        <image name="junioricon.png" width="640" height="640"/>
         <image name="young.png" width="950" height="337"/>
     </resources>
 </document>
