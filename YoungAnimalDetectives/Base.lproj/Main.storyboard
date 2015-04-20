@@ -566,14 +566,14 @@
                                     <rect key="frame" x="208" y="144" width="137" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-U0-RtI" userLabel="ExportButton">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-U0-RtI" userLabel="ExportButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Export to BioLifeTracker">
+                                <state key="normal" image="export.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="532" y="40" width="140" height="72"/>
+                                    <rect key="frame" x="544" y="36" width="100" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="exportProject:" destination="kuA-u6-sdr" eventType="touchUpInside" id="pdL-9L-nDe"/>
@@ -633,6 +633,7 @@
         <image name="circlerabbit.png" width="320" height="320"/>
         <image name="clipboardbg.png" width="791" height="1077"/>
         <image name="detectives.png" width="950" height="182"/>
+        <image name="export.png" width="1500" height="1500"/>
         <image name="forward.png" width="227" height="234"/>
         <image name="home.png" width="296" height="294"/>
         <image name="junioricon.png" width="640" height="640"/>
@@ -641,7 +642,7 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y3y-Ml-HXX"/>
-        <segue reference="mFa-eD-dhC"/>
+        <segue reference="BWf-Cy-8xt"/>
+        <segue reference="GJK-Kd-qPR"/>
     </inferredMetricsTieBreakers>
 </document>
