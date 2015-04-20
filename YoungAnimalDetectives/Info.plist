@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>icon.png</string>
+			<string>juniorlogo.png</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>com.younganimaldeetectives.customUTIHandler.bltproject</string>

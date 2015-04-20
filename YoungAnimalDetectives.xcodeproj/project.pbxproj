@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC530C641AE4E3E7008E1A17 /* juniorlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C631AE4E3E7008E1A17 /* juniorlogo.png */; };
 		ACB479DA1AE07F1B00F61C53 /* circlecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D61AE07F1B00F61C53 /* circlecat.png */; };
 		ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D71AE07F1B00F61C53 /* circlepig.png */; };
 		ACB479DC1AE07F1B00F61C53 /* circlepup.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D81AE07F1B00F61C53 /* circlepup.png */; };
@@ -29,7 +30,6 @@
 		ACBE5D651AE39D0A0026235F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D641AE39D0A0026235F /* User.swift */; };
 		ACBE5D821AE3A19B0026235F /* BLTProjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D801AE3A19B0026235F /* BLTProjectSerializer.swift */; };
 		ACBE5D851AE3A56A0026235F /* ExportProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE5D841AE3A56A0026235F /* ExportProjectService.swift */; };
-		ACBE5D871AE3B2B30026235F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBE5D861AE3B2B30026235F /* icon.png */; };
 		ACDE1FA51AE0CE8D001A4684 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */; };
 		ACDE1FA71AE0D109001A4684 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FA61AE0D109001A4684 /* StorageManager.swift */; };
 		ACDE1FAD1AE1DFCA001A4684 /* StandardEthogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */; };
@@ -86,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC530C631AE4E3E7008E1A17 /* juniorlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juniorlogo.png; sourceTree = "<group>"; };
 		ACB479D61AE07F1B00F61C53 /* circlecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlecat.png; sourceTree = "<group>"; };
 		ACB479D71AE07F1B00F61C53 /* circlepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepig.png; sourceTree = "<group>"; };
 		ACB479D81AE07F1B00F61C53 /* circlepup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepup.png; sourceTree = "<group>"; };
@@ -109,7 +110,6 @@
 		ACBE5D791AE39EBD0026235F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ACBE5D801AE3A19B0026235F /* BLTProjectSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTProjectSerializer.swift; sourceTree = "<group>"; };
 		ACBE5D841AE3A56A0026235F /* ExportProjectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportProjectService.swift; sourceTree = "<group>"; };
-		ACBE5D861AE3B2B30026235F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		ACDE1FA61AE0D109001A4684 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardEthogram.swift; sourceTree = "<group>"; };
@@ -262,10 +262,10 @@
 		ACFCB8AF1ADF2DD70041E7D5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ACBE5D861AE3B2B30026235F /* icon.png */,
 				ACFCB8B21ADF2E920041E7D5 /* cat.png */,
 				ACFCB8B31ADF2E920041E7D5 /* clipboardbg.png */,
 				ACFCB8B41ADF2E920041E7D5 /* background.png */,
+				AC530C631AE4E3E7008E1A17 /* juniorlogo.png */,
 				ACFCB8C41ADF322F0041E7D5 /* young.png */,
 				ACFCB8B51ADF2E920041E7D5 /* dog.png */,
 				ACFCB8B61ADF2E920041E7D5 /* pig.png */,
@@ -438,7 +438,6 @@
 				ACFCB8C91ADF6EA90041E7D5 /* forward.png in Resources */,
 				ACFCB8DC1ADF6EB10041E7D5 /* squarepup.png in Resources */,
 				ACFCB8BF1ADF2E920041E7D5 /* pig.png in Resources */,
-				ACBE5D871AE3B2B30026235F /* icon.png in Resources */,
 				ACB479EE1AE0C00000F61C53 /* table.png in Resources */,
 				ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */,
 				ACFCB8BC1ADF2E920041E7D5 /* clipboardbg.png in Resources */,
@@ -456,6 +455,7 @@
 				ACB479E01AE08D7C00F61C53 /* addbutton.png in Resources */,
 				ACFCB8DD1ADF6EB10041E7D5 /* squarerabbit.png in Resources */,
 				ACB479DD1AE07F1B00F61C53 /* circlerabbit.png in Resources */,
+				AC530C641AE4E3E7008E1A17 /* juniorlogo.png in Resources */,
 				ACFCB8C21ADF2E920041E7D5 /* animal-blue.png in Resources */,
 				ACFCB8901ADE59550041E7D5 /* Images.xcassets in Resources */,
 			);
