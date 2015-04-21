@@ -642,7 +642,7 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BWf-Cy-8xt"/>
         <segue reference="GJK-Kd-qPR"/>
+        <segue reference="Y3y-Ml-HXX"/>
     </inferredMetricsTieBreakers>
 </document>

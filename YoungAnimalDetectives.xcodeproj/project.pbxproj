@@ -10,6 +10,7 @@
 		AC530C641AE4E3E7008E1A17 /* juniorlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C631AE4E3E7008E1A17 /* juniorlogo.png */; };
 		AC530C661AE4EA42008E1A17 /* junioricon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C651AE4EA42008E1A17 /* junioricon.png */; };
 		AC530C681AE4ED42008E1A17 /* export.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C671AE4ED42008E1A17 /* export.png */; };
+		AC9FEFFC1AE6382D00C8833C /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FEFFB1AE6382D00C8833C /* TransitionManager.swift */; };
 		ACB479DA1AE07F1B00F61C53 /* circlecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D61AE07F1B00F61C53 /* circlecat.png */; };
 		ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D71AE07F1B00F61C53 /* circlepig.png */; };
 		ACB479DC1AE07F1B00F61C53 /* circlepup.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D81AE07F1B00F61C53 /* circlepup.png */; };
@@ -91,6 +92,7 @@
 		AC530C631AE4E3E7008E1A17 /* juniorlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juniorlogo.png; sourceTree = "<group>"; };
 		AC530C651AE4EA42008E1A17 /* junioricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = junioricon.png; sourceTree = "<group>"; };
 		AC530C671AE4ED42008E1A17 /* export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = export.png; sourceTree = "<group>"; };
+		AC9FEFFB1AE6382D00C8833C /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		ACB479D61AE07F1B00F61C53 /* circlecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlecat.png; sourceTree = "<group>"; };
 		ACB479D71AE07F1B00F61C53 /* circlepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepig.png; sourceTree = "<group>"; };
 		ACB479D81AE07F1B00F61C53 /* circlepup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepup.png; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				ACFCB8AF1ADF2DD70041E7D5 /* Images */,
 				ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */,
 				ACFCB8FD1ADF98F80041E7D5 /* UserAuthService.swift */,
+				AC9FEFFB1AE6382D00C8833C /* TransitionManager.swift */,
 				ACFCB9201ADFABD30041E7D5 /* Constants.swift */,
 				ACDE1FAC1AE1DFCA001A4684 /* StandardEthogram.swift */,
 				ACDE1FA61AE0D109001A4684 /* StorageManager.swift */,
@@ -483,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9FEFFC1AE6382D00C8833C /* TransitionManager.swift in Sources */,
 				ACBE5D5E1AE39C1A0026235F /* Tag.swift in Sources */,
 				ACFCB91F1ADFA9330041E7D5 /* BLTWeatherProtocol.swift in Sources */,
 				ACBE5D821AE3A19B0026235F /* BLTProjectSerializer.swift in Sources */,

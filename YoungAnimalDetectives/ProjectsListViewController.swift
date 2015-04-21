@@ -9,6 +9,7 @@
 import UIKit
 
 class ProjectsListViewController: UIViewController {
+    let transitionManager = TransitionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +39,14 @@ class ProjectsListViewController: UIViewController {
             SharedData.sharedInstance.currentProject = Constants.Project.TITLE_RABBIT
             StorageManager.loadProjectFromArchives()
         }
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as! UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+
     }
+
 }
