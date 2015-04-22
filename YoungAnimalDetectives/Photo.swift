@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Photo: BiolifeModel {
+class Photo: BiolifeModel, BLTPhotoProtocol {
     static var ClassUrl: String { return "photos" }
     override var requiresMultipart: Bool { return true }
     

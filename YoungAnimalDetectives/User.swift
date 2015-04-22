@@ -8,16 +8,16 @@
 
 import Foundation
 
-class User: NSObject, NSCoding {
+class User: NSObject, NSCoding, BLTUserProtocol {
     class var ClassUrl: String { return "users" }
     
     var id: Int = 1
     var email: String
     var name: String
     
-    init(name: String, email: String) {
-        self.name = name
-        self.email = email
+    override init() {
+        self.name = "default"
+        self.email = "default"
         super.init()
     }
     

@@ -13,7 +13,7 @@ class UserAuthService {
         case Facebook, Google
     }
     
-    private var _user: User = User(name: "Default", email: "Default")
+    private var _user: User = User()
     private var _accessToken: String?
     private var _authProvider: OAuthProvider?
     var user: User {

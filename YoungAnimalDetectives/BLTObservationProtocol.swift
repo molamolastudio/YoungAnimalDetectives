@@ -14,7 +14,7 @@ protocol BLTObservationProtocol {
     var information: String { get }
     var timestamp: NSDate { get }
     var photo: Photo? { get }
-    var individual: Individual { get }
+    var individual: Individual? { get }
     var location: Location? { get }
     var weather: Weather? { get }
     

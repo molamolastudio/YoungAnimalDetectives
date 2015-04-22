@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Weather: BiolifeModel {
+class Weather: BiolifeModel, BLTWeatherProtocol {
     static let ClassUrl = "weathers"
     
     private var _weather: String

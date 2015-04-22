@@ -10,6 +10,7 @@
 		AC530C641AE4E3E7008E1A17 /* juniorlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C631AE4E3E7008E1A17 /* juniorlogo.png */; };
 		AC530C661AE4EA42008E1A17 /* junioricon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C651AE4EA42008E1A17 /* junioricon.png */; };
 		AC530C681AE4ED42008E1A17 /* export.png in Resources */ = {isa = PBXBuildFile; fileRef = AC530C671AE4ED42008E1A17 /* export.png */; };
+		AC5D7EBE1AE819F10060F939 /* BLTUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D7EBD1AE819F10060F939 /* BLTUserProtocol.swift */; };
 		AC9FEFFC1AE6382D00C8833C /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FEFFB1AE6382D00C8833C /* TransitionManager.swift */; };
 		ACB479DA1AE07F1B00F61C53 /* circlecat.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D61AE07F1B00F61C53 /* circlecat.png */; };
 		ACB479DB1AE07F1B00F61C53 /* circlepig.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB479D71AE07F1B00F61C53 /* circlepig.png */; };
@@ -92,6 +93,7 @@
 		AC530C631AE4E3E7008E1A17 /* juniorlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juniorlogo.png; sourceTree = "<group>"; };
 		AC530C651AE4EA42008E1A17 /* junioricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = junioricon.png; sourceTree = "<group>"; };
 		AC530C671AE4ED42008E1A17 /* export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = export.png; sourceTree = "<group>"; };
+		AC5D7EBD1AE819F10060F939 /* BLTUserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTUserProtocol.swift; sourceTree = "<group>"; };
 		AC9FEFFB1AE6382D00C8833C /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		ACB479D61AE07F1B00F61C53 /* circlecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlecat.png; sourceTree = "<group>"; };
 		ACB479D71AE07F1B00F61C53 /* circlepig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlepig.png; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 		ACBE5D541AE39C1A0026235F /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		ACBE5D601AE39C410026235F /* BiolifeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiolifeModel.swift; sourceTree = "<group>"; };
 		ACBE5D641AE39D0A0026235F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ACBE5D791AE39EBD0026235F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ACBE5D801AE3A19B0026235F /* BLTProjectSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTProjectSerializer.swift; sourceTree = "<group>"; };
 		ACBE5D841AE3A56A0026235F /* ExportProjectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportProjectService.swift; sourceTree = "<group>"; };
 		ACDE1FA41AE0CE8D001A4684 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -317,7 +318,6 @@
 				ACFCB9061ADFA25B0041E7D5 /* BiolifeDateFormatter.swift */,
 				ACBE5D641AE39D0A0026235F /* User.swift */,
 				ACBE5D601AE39C410026235F /* BiolifeModel.swift */,
-				ACBE5D791AE39EBD0026235F /* User.swift */,
 				ACFCB9081ADFA3270041E7D5 /* NSDate+Encoding.swift */,
 				ACBE5D4A1AE39C1A0026235F /* Project.swift */,
 				ACBE5D4B1AE39C1A0026235F /* Storable.swift */,
@@ -338,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				ACFCB90C1ADFA9330041E7D5 /* BLTBehaviourStateProtocol.swift */,
+				AC5D7EBD1AE819F10060F939 /* BLTUserProtocol.swift */,
 				ACFCB90D1ADFA9330041E7D5 /* BLTEthogramProtocol.swift */,
 				ACFCB90E1ADFA9330041E7D5 /* BLTIndividualProtocol.swift */,
 				ACFCB90F1ADFA9330041E7D5 /* BLTLocationProtocol.swift */,
@@ -486,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5D7EBE1AE819F10060F939 /* BLTUserProtocol.swift in Sources */,
 				AC9FEFFC1AE6382D00C8833C /* TransitionManager.swift in Sources */,
 				ACBE5D5E1AE39C1A0026235F /* Tag.swift in Sources */,
 				ACFCB91F1ADFA9330041E7D5 /* BLTWeatherProtocol.swift in Sources */,

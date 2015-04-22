@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Tag: BiolifeModel {
+class Tag: BiolifeModel, BLTTagProtocol {
     static let ClassUrl = "tags"
     
     private var _name: String
