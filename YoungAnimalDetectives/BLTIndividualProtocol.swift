@@ -14,6 +14,7 @@ protocol BLTIndividualProtocol {
     var label: String { get }
     var tags: [Tag] { get }
     var photo: Photo? { get }
-
+    
+    /// This function encodes the instance into a dictionary.
     func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary)
 }
