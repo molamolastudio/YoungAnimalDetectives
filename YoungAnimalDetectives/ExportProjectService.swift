@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class ExportObservationsService {
+/// This class exports the specified project in CSV file format,
+/// to BioLifeTracker application.
+class ExportProjectService {
     var project: Project
     var serializedProjectPath: NSURL?
     static var documentInteractionVC: UIDocumentInteractionController!
@@ -22,9 +24,9 @@ class ExportObservationsService {
     
     func openInOtherApps(button: UIButton) {
         if let fileURL = serializedProjectPath {
-            ExportObservationsService.documentInteractionVC = UIDocumentInteractionController(URL: fileURL)
-            ExportObservationsService.documentInteractionVC.UTI = "public.comma-separated-values-text"
-            ExportObservationsService.documentInteractionVC.presentOpenInMenuFromRect(CGRect(x: 70.0, y: 36.0, width: 0.0, height: 0.0), inView: button, animated: true)
+            ExportProjectService.documentInteractionVC = UIDocumentInteractionController(URL: fileURL)
+            ExportProjectService.documentInteractionVC.UTI = "public.comma-separated-values-text"
+            ExportProjectService.documentInteractionVC.presentOpenInMenuFromRect(CGRect(x: 70.0, y: 36.0, width: 0.0, height: 0.0), inView: button, animated: true)
         }
     }
 }

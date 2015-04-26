@@ -184,6 +184,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC40E3251AECAE8E0078A169 /* BLT Export Library */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCB90B1ADFA9050041E7D5 /* BLTProtocols */,
+				ACFCB9221ADFAC160041E7D5 /* BLTSerialization */,
+				ACBE5D831AE3A5220026235F /* BLTService */,
+			);
+			name = "BLT Export Library";
+			sourceTree = "<group>";
+		};
 		ACBE5D831AE3A5220026235F /* BLTService */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,9 +314,7 @@
 		ACFCB8DF1ADF910A0041E7D5 /* BLTModelLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				ACBE5D831AE3A5220026235F /* BLTService */,
-				ACFCB9221ADFAC160041E7D5 /* BLTSerialization */,
-				ACFCB90B1ADFA9050041E7D5 /* BLTProtocols */,
+				AC40E3251AECAE8E0078A169 /* BLT Export Library */,
 				ACFCB8F81ADF92B30041E7D5 /* BLTDataModels */,
 			);
 			name = BLTModelLibrary;

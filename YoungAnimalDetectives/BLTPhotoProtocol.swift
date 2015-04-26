@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+/// This protocol is to be implemented by external applications
+/// that wishes to export their project to BioLifeTracker.
 protocol BLTPhotoProtocol {
     var image: UIImage { get }
     
