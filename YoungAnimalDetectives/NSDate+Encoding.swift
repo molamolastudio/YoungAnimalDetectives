@@ -12,7 +12,7 @@ extension NSDate {
     /// Returns a String representation of the date using the format recognized
     /// by BioLifeTracker Web Server.
     func toBiolifeDateFormat() -> String {
-        let dateFormatter = BiolifeDateFormatter()
+        let dateFormatter = DateFormatter()
         return dateFormatter.formatDate(self)
     }
     

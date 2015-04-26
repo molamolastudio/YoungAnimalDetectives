@@ -8,14 +8,20 @@
 
 import Foundation
 
+/// This class creates a standard ethogram.
 class StandardEthogram {
     
     class func getEthogram() -> Ethogram {
-        let movingBS = BehaviourState(name: "Moving", information: "Moving in a specific direction with an aim")
-        let groomingBS = BehaviourState(name: "Grooming", information: "Animal cleaning, licking or stroking itself")
-        let ingestingBS = BehaviourState(name: "Eating/Drinking", information: "Animal ingesting objects or liquids")
-        let restingBS = BehaviourState(name: "Resting", information: "Animal lying or sitting, eyes opened or closed")
-        let notVisibleBS = BehaviourState(name: "Not Visible", information: "Animal in a visually inaccessible location")
+        let movingBS = BehaviourState(name: "Moving", information:
+                            "Moving in a specific direction with an aim")
+        let groomingBS = BehaviourState(name: "Grooming", information:
+                            "Animal cleaning, licking or stroking itself")
+        let ingestingBS = BehaviourState(name: "Eating/Drinking", information:
+                            "Animal ingesting objects or liquids")
+        let restingBS = BehaviourState(name: "Resting", information:
+                            "Animal lying or sitting, eyes opened or closed")
+        let notVisibleBS = BehaviourState(name: "Not Visible", information:
+                            "Animal in a visually inaccessible location")
         
         var ethogram = Ethogram(name: "Animal")
         ethogram.addBehaviourState(movingBS)

@@ -16,10 +16,17 @@ class ProjectDisplayViewController: UIViewController {
 
     @IBAction func goToObservations(sender: AnyObject) {
         // check whether nickname and type is filled in
-        if nicknameField.text == "" || typeField.text == "" {
-            let actionSheetController = UIAlertController(title: "Missing information", message: "Please key in nickname and type", preferredStyle: .Alert)
+        if SharedData.sharedInstance.nickname == nil
+                && SharedData.sharedInstance.type == nil
+                && (nicknameField.text == "" || typeField.text == "") {
+                    
+            let title = "Missing information"
+            let msg = "Please key in nickname and type"
+            let action = "OK"
+                    
+            let actionSheetController = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
         
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+            let OKAction = UIAlertAction(title: action, style: .Default) { (action) in }
             actionSheetController.addAction(OKAction)
         
             //We need to provide a popover sourceView when using it on iPad
@@ -134,18 +141,42 @@ class ProjectDisplayViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let FONT_SIZE_INPUT = CGFloat(40)
+        let FONT_SIZE_TITLE = CGFloat(35)
+        let FONT_WHITE_COLOR = CGFloat(1.0)
+        let FONT_WHITE_ALPHA = CGFloat(1.0)
+        
+        if let name = SharedData.sharedInstance.nickname {
+            nicknameField.hidden = true
+            individualNickname.text = name
+            individualNickname.font = UIFont(descriptor: UIFontDescriptor(name: Constants.Font.CHALKDUSTER, size: 0), size: FONT_SIZE_INPUT)
+            individualNickname.textColor = UIColor(white: FONT_WHITE_COLOR, alpha: FONT_WHITE_ALPHA)
+        } else {
+            individualNickname.hidden = true
+        }
+        
+        if let type = SharedData.sharedInstance.type {
+            typeField.hidden = true
+            individualType.text = type
+            individualType.font = UIFont(descriptor: UIFontDescriptor(name: Constants.Font.CHALKDUSTER, size: 0), size: FONT_SIZE_INPUT)
+            individualType.textColor = UIColor(white: FONT_WHITE_COLOR, alpha: FONT_WHITE_ALPHA)
+        } else {
+            individualType.hidden = true
+        }
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        // this gets a reference to the screen that we're about to transition to
+        // Implement custom transition
         let toViewController = segue.destinationViewController as! UIViewController
-        
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
         
     }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-class BiolifeDateFormatter {
+/// This class handles the format of the date printed.
+class DateFormatter {
     var dateFormatter = NSDateFormatter()
 
     init() {

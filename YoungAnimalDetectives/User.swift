@@ -8,28 +8,28 @@
 
 import Foundation
 
+/// This is the data model class for User.
 class User: NSObject, NSCoding, BLTUserProtocol {
-    class var ClassUrl: String { return "users" }
     
     var id: Int = 1
     var email: String
     var name: String
     
     override init() {
-        self.name = "default"
-        self.email = "default"
+        self.name = Constants.Key.DEFAULT
+        self.email = Constants.Key.DEFAULT
         super.init()
     }
     
     required init(coder aDecoder: NSCoder) {
-        self.email = aDecoder.decodeObjectForKey("email") as! String
-        self.name = aDecoder.decodeObjectForKey("name") as! String
+        self.email = aDecoder.decodeObjectForKey(Constants.Key.EMAIL) as! String
+        self.name = aDecoder.decodeObjectForKey(Constants.Key.NAME) as! String
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(email, forKey: "email")
-        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(email, forKey: Constants.Key.EMAIL)
+        aCoder.encodeObject(name, forKey: Constants.Key.NAME)
     }
     
     func toString() -> String {
@@ -37,9 +37,9 @@ class User: NSObject, NSCoding, BLTUserProtocol {
     }
     
     init(dictionary: NSDictionary) {
-        id = dictionary["id"] as! Int
-        email = dictionary["email"] as! String
-        name = dictionary["username"] as! String
+        id = dictionary[Constants.Key.ID] as! Int
+        email = dictionary[Constants.Key.EMAIL] as! String
+        name = dictionary[Constants.Key.USERNAME] as! String
         super.init()
     }
     
@@ -49,8 +49,8 @@ class User: NSObject, NSCoding, BLTUserProtocol {
 
     
     func encodeRecursivelyWithDictionary(dictionary: NSMutableDictionary) {
-        dictionary.setValue(id, forKey: "id")
-        dictionary.setValue(email, forKey: "email")
-        dictionary.setValue(name, forKey: "username")
+        dictionary.setValue(id, forKey: Constants.Key.ID)
+        dictionary.setValue(email, forKey: Constants.Key.EMAIL)
+        dictionary.setValue(name, forKey: Constants.Key.USERNAME)
     }
 }

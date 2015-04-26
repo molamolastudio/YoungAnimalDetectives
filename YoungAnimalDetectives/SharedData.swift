@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// This class handles shared data across different View controllers.
 class SharedData {
     
     var currentProject: String?
@@ -15,6 +16,7 @@ class SharedData {
     var nickname: String?
     var type: String?
     
+    /// Implementation of Singleton Pattern
     class var sharedInstance: SharedData {
         struct Singleton {
             static let instance = SharedData()

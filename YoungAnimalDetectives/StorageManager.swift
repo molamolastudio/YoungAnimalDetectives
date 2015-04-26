@@ -8,10 +8,14 @@
 
 import Foundation
 
+/// This is the manager class to manage storing of data to disk.
 class StorageManager {
  
+    /// This class method saves the current project to disk.
     class func saveProjectToArchives() {
-        let dirs : [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
+        let dirs : [String]? = NSSearchPathForDirectoriesInDomains(
+                    NSSearchPathDirectory.DocumentDirectory,
+                    NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         
         let identifier = SharedData.sharedInstance.currentProject
@@ -34,11 +38,14 @@ class StorageManager {
         }
     }
     
+    /// This class method loads the selected project from the disk.
     class func loadProjectFromArchives() {
         
         let identifier = SharedData.sharedInstance.currentProject
         
-        let dirs: [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
+        let dirs: [String]? = NSSearchPathForDirectoriesInDomains(
+                    NSSearchPathDirectory.DocumentDirectory,
+                    NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         if (dirs == nil || identifier == nil) {
             return
@@ -54,24 +61,31 @@ class StorageManager {
         }
         
         let archiver = NSKeyedUnarchiver(forReadingWithData: data!)
-        SharedData.sharedInstance.project = archiver.decodeObjectForKey(Constants.StorageKeys.PROJECT) as? Project
+        SharedData.sharedInstance.project = archiver.decodeObjectForKey(
+                    Constants.StorageKeys.PROJECT) as? Project
         if SharedData.sharedInstance.project == nil {
             
             let ethogram: Ethogram = StandardEthogram.getEthogram()
             SharedData.sharedInstance.project = Project(name: identifier!, ethogram: ethogram)
             
-            let session = Session(project: SharedData.sharedInstance.project!, name: Constants.Words.SESSION_UNLIMITED, type: SessionType.Focal)
+            let session = Session(project: SharedData.sharedInstance.project!,
+                    name: Constants.Words.SESSION_UNLIMITED, type: SessionType.Focal)
             SharedData.sharedInstance.project!.addSessions([session])
         }
         
-        SharedData.sharedInstance.nickname = archiver.decodeObjectForKey(Constants.StorageKeys.NICKNAME) as! String?
-        SharedData.sharedInstance.type = archiver.decodeObjectForKey(Constants.StorageKeys.TYPE) as! String?
+        SharedData.sharedInstance.nickname = archiver.decodeObjectForKey(
+                    Constants.StorageKeys.NICKNAME) as! String?
+        SharedData.sharedInstance.type = archiver.decodeObjectForKey(
+                    Constants.StorageKeys.TYPE) as! String?
     }
     
+    /// This class method deletes the selected project from disk.
     class func deleteProjectFromArchives(identifier: String) -> Bool {
         
         let fileManager = NSFileManager.defaultManager()
-        let dirs: [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as? [String]
+        let dirs: [String]? = NSSearchPathForDirectoriesInDomains(
+                    NSSearchPathDirectory.DocumentDirectory,
+                    NSSearchPathDomainMask.UserDomainMask, true) as? [String]
         
         if (dirs == nil) {
             return false

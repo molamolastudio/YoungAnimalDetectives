@@ -61,6 +61,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
+    /// This function creates a pop-up for the user to enter information.
     func createInformationPopUp(sender: AnyObject) {
         let actionSheetController: UIAlertController = UIAlertController(title: Constants.Words.OBS_FORM_TITLE, message: "", preferredStyle: .Alert)
         
@@ -127,12 +128,12 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-    // This function sets the number of sections in the table view.
+    /// This function sets the number of sections in the table view.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    // This function sets the number of rows in table view.
+    /// This function sets the number of rows in table view.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let project = SharedData.sharedInstance.project {
@@ -141,7 +142,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         return 0
     }
     
-    // This function sets the observation.
+    /// This function sets the observation.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let obsCell = Constants.Table.OBSERVATION_CELL_ID
         
@@ -161,7 +162,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         return cell
     }
     
-    // This function sets the height of the observation row
+    /// This function sets the height of the observation row
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let rowHeight = CGFloat(86)
         return rowHeight
@@ -171,7 +172,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         return true
     }
     
-    // This function deletes a game file
+    /// This function deletes a game file
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
@@ -183,18 +184,14 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
         tableView.reloadData()
     }
     
-    // This function sets the action after selecting a game file.
+    /// This function sets the action after selecting a game file.
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        // this gets a reference to the screen that we're about to transition to
+        // Implement custom transition
         let toViewController = segue.destinationViewController as! UIViewController
-        
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
         
     }

@@ -63,4 +63,21 @@ struct Constants {
         static let NICKNAME = "nickname"
         static let TYPE = "type"
     }
+    
+    struct Key {
+        static let ID = "id"
+        static let USER = "user"
+        static let NAME = "name"
+        static let EMAIL = "email"
+        static let DEFAULT = "default"
+        static let USERNAME = "username"
+        static let CREATEDAT = "createdAt"
+        static let CREATEDBY = "createdBy"
+        static let UPDATEDAT = "updatedAt"
+        static let UPDATEDBY = "updatedBy"
+        static let CREATEDATDICT = "created_at"
+        static let CREATEDBYDICT = "created_by"
+        static let UPDATEDATDICT = "updated_at"
+        static let UPDATEDBYDICT = "updated_by"
+    }
 }

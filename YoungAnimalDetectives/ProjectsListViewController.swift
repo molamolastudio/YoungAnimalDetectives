@@ -40,11 +40,8 @@ class ProjectsListViewController: UIViewController {
             StorageManager.loadProjectFromArchives()
         }
         
-        // this gets a reference to the screen that we're about to transition to
+        // Implement custom transition
         let toViewController = segue.destinationViewController as! UIViewController
-        
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
 
     }
