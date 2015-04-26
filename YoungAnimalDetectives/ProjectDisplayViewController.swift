@@ -16,7 +16,7 @@ class ProjectDisplayViewController: UIViewController {
 
     @IBAction func goToObservations(sender: AnyObject) {
         // check whether nickname and type is filled in
-        if SharedData.sharedInstance.nickname == nil || SharedData.sharedInstance.type == nil {
+        if nicknameField.text == "" || typeField.text == "" {
             let actionSheetController = UIAlertController(title: "Missing information", message: "Please key in nickname and type", preferredStyle: .Alert)
         
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
@@ -28,6 +28,9 @@ class ProjectDisplayViewController: UIViewController {
             //Present the AlertController
             self.presentViewController(actionSheetController, animated: true, completion: nil)
         } else {
+            SharedData.sharedInstance.nickname = nicknameField.text
+            SharedData.sharedInstance.type = typeField.text
+            StorageManager.saveProjectToArchives()
             StorageManager.loadProjectFromArchives()
             performSegueWithIdentifier(Constants.Segue.GO_OBSERVATIONS, sender: self)
         }
@@ -35,14 +38,10 @@ class ProjectDisplayViewController: UIViewController {
     
     @IBOutlet weak var nicknameField: UITextField!
     @IBAction func didTypeNickname(sender: AnyObject) {
-        SharedData.sharedInstance.nickname = nicknameField.text
-        StorageManager.saveProjectToArchives()
         nicknameField.resignFirstResponder()
     }
     @IBOutlet weak var typeField: UITextField!
     @IBAction func didTypeType(sender: AnyObject) {
-        SharedData.sharedInstance.type = typeField.text
-        StorageManager.saveProjectToArchives()
         typeField.resignFirstResponder()
     }
     

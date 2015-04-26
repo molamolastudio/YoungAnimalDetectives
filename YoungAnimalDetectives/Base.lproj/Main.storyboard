@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--MainViewController-->
@@ -300,7 +300,7 @@
                                     <rect key="frame" x="448" y="225" width="235" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="didTypeNickname:" destination="YXa-gV-97x" eventType="editingDidEndOnExit" id="TtF-3Q-jpA"/>
+                                    <action selector="didTypeNickname:" destination="YXa-gV-97x" eventType="editingDidEnd" id="zVG-Oz-1a1"/>
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Type:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89u-7U-SsP" userLabel="Type">
@@ -320,7 +320,7 @@
                                     <rect key="frame" x="448" y="379" width="235" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="didTypeType:" destination="YXa-gV-97x" eventType="editingDidEndOnExit" id="nCN-On-Leq"/>
+                                    <action selector="didTypeType:" destination="YXa-gV-97x" eventType="editingDidEnd" id="epX-7R-T1z"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-Qq-1Kz">
@@ -642,7 +642,7 @@
         <image name="young.png" width="950" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="x7r-XW-f4M"/>
         <segue reference="GJK-Kd-qPR"/>
-        <segue reference="Y3y-Ml-HXX"/>
     </inferredMetricsTieBreakers>
 </document>
