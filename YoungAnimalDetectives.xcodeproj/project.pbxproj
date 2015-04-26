@@ -184,14 +184,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC40E3251AECAE8E0078A169 /* BLT Export Library */ = {
+		AC40E3251AECAE8E0078A169 /* BLT Library */ = {
 			isa = PBXGroup;
 			children = (
 				ACFCB90B1ADFA9050041E7D5 /* BLTProtocols */,
 				ACFCB9221ADFAC160041E7D5 /* BLTSerialization */,
 				ACBE5D831AE3A5220026235F /* BLTService */,
 			);
-			name = "BLT Export Library";
+			name = "BLT Library";
+			path = YoungAnimalDetectives;
 			sourceTree = "<group>";
 		};
 		ACBE5D831AE3A5220026235F /* BLTService */ = {
@@ -205,6 +206,7 @@
 		ACFCB87A1ADE59550041E7D5 = {
 			isa = PBXGroup;
 			children = (
+				AC40E3251AECAE8E0078A169 /* BLT Library */,
 				ACFCB8851ADE59550041E7D5 /* YoungAnimalDetectives */,
 				ACFCB89B1ADE59550041E7D5 /* YoungAnimalDetectivesTests */,
 				ACFCB8841ADE59550041E7D5 /* Products */,
@@ -224,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				ACFCB8F81ADF92B30041E7D5 /* DataModels */,
-				AC40E3251AECAE8E0078A169 /* BLT Export Library */,
 				ACFCB8AF1ADF2DD70041E7D5 /* Images */,
 				ACFCB8881ADE59550041E7D5 /* AppDelegate.swift */,
 				ACFCB8FD1ADF98F80041E7D5 /* UserAuthService.swift */,
