@@ -62,6 +62,7 @@ struct Constants {
         static let PROJECT = "project"
         static let NICKNAME = "nickname"
         static let TYPE = "type"
+        static let INDIVIDUAL = "individual"
     }
     
     struct Key {

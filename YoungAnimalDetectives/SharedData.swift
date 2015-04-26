@@ -15,6 +15,7 @@ class SharedData {
     var project: Project?
     var nickname: String?
     var type: String?
+    var individual: Individual?
     
     /// Implementation of Singleton Pattern
     class var sharedInstance: SharedData {

@@ -37,6 +37,17 @@ class ProjectDisplayViewController: UIViewController {
         } else {
             SharedData.sharedInstance.nickname = nicknameField.text
             SharedData.sharedInstance.type = typeField.text
+            
+            SharedData.sharedInstance.individual = Individual(label:
+                SharedData.sharedInstance.nickname!)
+            
+            // Add individual to the project
+            if SharedData.sharedInstance.project!.individuals.isEmpty {
+                SharedData.sharedInstance.project!.addIndividuals([SharedData.sharedInstance.individual!])
+            } else {
+                SharedData.sharedInstance.project!.updateIndividual(0, updatedIndividual: SharedData.sharedInstance.individual!)
+            }
+            
             StorageManager.saveProjectToArchives()
             StorageManager.loadProjectFromArchives()
             performSegueWithIdentifier(Constants.Segue.GO_OBSERVATIONS, sender: self)

@@ -8,24 +8,20 @@
 
 import Foundation
 
+/// This class handles the user.
 class UserAuthService {
-    enum OAuthProvider {
-        case Facebook, Google
-    }
-    
+
     private var _user: User = User()
     private var _accessToken: String?
-    private var _authProvider: OAuthProvider?
+    
     var user: User {
         get { return _user }
     }
     var accessToken: String? {
         get { return _accessToken }
     }
-    var authProvider: OAuthProvider? {
-        get { return _authProvider }
-    }
     
+    /// Implementation of Singleton Pattern
     class var sharedInstance: UserAuthService {
         struct Singleton {
             static let instance = UserAuthService()

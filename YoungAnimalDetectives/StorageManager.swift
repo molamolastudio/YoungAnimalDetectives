@@ -23,6 +23,7 @@ class StorageManager {
         let project = SharedData.sharedInstance.project
         let nickname = SharedData.sharedInstance.nickname
         let type = SharedData.sharedInstance.type
+        let individual = SharedData.sharedInstance.individual
         
         if ((dirs) != nil && identifier != nil) {
             let dir = dirs![0]; //documents directory
@@ -33,6 +34,7 @@ class StorageManager {
             archiver.encodeObject(project, forKey: Constants.StorageKeys.PROJECT)
             archiver.encodeObject(nickname, forKey: Constants.StorageKeys.NICKNAME)
             archiver.encodeObject(type, forKey: Constants.StorageKeys.TYPE)
+            archiver.encodeObject(individual, forKey: Constants.StorageKeys.INDIVIDUAL)
             archiver.finishEncoding()
             data.writeToFile(path, atomically: true)
         }
@@ -77,6 +79,8 @@ class StorageManager {
                     Constants.StorageKeys.NICKNAME) as! String?
         SharedData.sharedInstance.type = archiver.decodeObjectForKey(
                     Constants.StorageKeys.TYPE) as! String?
+        SharedData.sharedInstance.individual = archiver.decodeObjectForKey(
+            Constants.StorageKeys.INDIVIDUAL) as! Individual?
     }
     
     /// This class method deletes the selected project from disk.
