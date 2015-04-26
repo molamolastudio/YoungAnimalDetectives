@@ -14,7 +14,7 @@ class ObservationsNotepadViewController: UIViewController, UITableViewDataSource
     
     @IBOutlet weak var exportProjectButton: UIButton!
     @IBAction func exportProject(sender: AnyObject) {
-        let exportProjService = ExportObservationsService(project: SharedData.sharedInstance.project!)
+        let exportProjService = ExportProjectService(project: SharedData.sharedInstance.project!)
         exportProjService.openInOtherApps(exportProjectButton)
     }
     @IBOutlet weak var observationTable: UITableView!
